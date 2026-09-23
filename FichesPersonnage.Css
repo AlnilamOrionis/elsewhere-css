@@ -335,3 +335,173 @@ pa2 {
     color: #ddd;
     text-decoration: none;
 }
+
+/* ===== FICHE DE PRESENTATION ===== */
+
+.BoxEnteteLiens {
+  box-sizing: border-box;
+  width: 550px;
+  margin: 20px auto 0;
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou1);
+}
+
+.BoxTopEnteteLiens {
+  height: 170px;
+  background : var(--colorAldou2);
+  background-size: 33%;
+  border-radius: 20px;
+}
+
+.BGTitleEnteteLiens {
+  position: relative;
+  top: 20px;
+  left: -30px;
+  width: 600px;
+  margin: auto;
+  padding: 15px 25px;
+  background : var(--colorAldou4);
+  border-radius: 20px;
+}
+
+.TitleEneteLiens {
+  margin-left: 150px;
+  color: var(--colorAldou0);
+  font-family: var(--fontAldou2);
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.SSEneteteLiens {
+  position: relative;
+  top: 40px;
+  left: 180px;
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  overflow: hidden;
+  background-color: var(--colorAldou0);
+  box-shadow: 0 0 5px var(--colorAldou4);
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.LiensEnteteVava {
+  position: relative;
+  z-index: 1;
+  top: -105px;
+  left: 25px;
+  width: 110px !important;
+  height: 200px !important;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.InfosGen {
+  width: 400px;
+  margin: 30px auto 0;
+  padding: 10px 25px;
+  background : var(--colorAldou4);
+color : var(--colorfontAldou2);
+  font-family: var(--fontAldou2);
+  border-radius: 20px;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ZoneAdj {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.Adj1,
+.Adj2 {
+  width: 120px;
+  padding: 5px;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.Adj1 {
+  background-color: var(--colorAldou3);
+}
+
+.Adj2 {
+  background-color: var(--colorAldou2);
+}
+
+.PlusInfo {
+  position: relative;
+  top: -30px;
+}
+
+.MiniAxolotl {
+  position: relative;
+  top: 45px;
+  left: 10px;
+}
+
+.Axolotl {
+  width: 70px;
+}
+
+.InfoTi {
+  margin: 0 0 5px 70px;
+  color: var(--colorfontAldou1);
+  text-transform: uppercase;
+}
+
+.BoxPlusInfo {
+  padding: 5px;
+  background : var(--colorAldou4);
+  border-radius: 5px;
+}
+
+.InfoPlus {
+  height: 200px;
+  padding: 10px;
+  overflow: auto;
+  background-color: var(--colorAldou0);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.ZoneGifs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: -15px;
+  padding: 20px;
+  background : var(--colorAldou2);
+  background-size: 33%;
+  border-radius: 20px;
+}
+
+.MiniMess {
+  width: 80px;
+  height: 60px;
+  padding: 10px;
+  overflow: auto;
+  background-color: var(--colorAldou1);
+  box-shadow: 0 0 5px var(--colorAldou4);
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.GifsGen {
+  width: 90px !important;
+  height: 60px !important;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
