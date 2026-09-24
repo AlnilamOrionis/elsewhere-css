@@ -1,0 +1,237 @@
+/* Boutons latéraux */
+[data-theme-controls] {
+  position: fixed;
+  z-index: 999;
+  top: 55px;
+  left: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Bouton des notifications */
+#notiffi_button {
+  position: relative;
+  z-index: 999;
+
+  display: grid;
+  place-items: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou2);
+  border: 0;
+  border-radius: 50%;
+
+  font-size: 16px;
+  cursor: pointer;
+  transition: 300ms ease;
+}
+
+#notiffi_button:hover,
+#notiffi_button.active {
+  color: var(--colorfontAldou2);
+  background: var(--colorAldou4);
+  transform: rotate(10deg);
+}
+
+/* Nombre de notifications */
+#notiffi_button .unread_count {
+  position: absolute;
+  top: -4px;
+  right: -5px;
+
+  display: grid;
+  place-items: center;
+
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+
+  color: white;
+  background: var(--colorAldou4);
+  border-radius: 10px;
+
+  font-size: 10px;
+  line-height: 1;
+}
+
+#notiffi_button .unread_count:empty {
+  display: none;
+}
+
+/* Panneau fermé */
+#notiffi_panel {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  width: min(380px, calc(100vw - 15px));
+  padding: 110px 18px 18px;
+
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou0);
+  border-right: 2px solid var(--colorAldou4);
+  box-shadow: 5px 0 20px rgb(0 0 0 / 15%);
+
+  visibility: hidden;
+  transform: translateX(-105%);
+  transition:
+    transform 300ms ease,
+    visibility 300ms ease;
+}
+
+/* Panneau ouvert */
+#notiffi_panel.open {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Liste */
+.all_notifications {
+  display: block;
+  flex: 1;
+  min-height: 0;
+  padding: 8px;
+
+  overflow-y: auto;
+  background: var(--colorAldou1);
+  border-radius: 15px;
+}
+
+.no_notification {
+  display: block;
+  padding: 30px 10px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Une notification */
+.notification {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  margin-bottom: 6px;
+  padding: 10px;
+
+  background: transparent;
+  border-radius: 10px;
+}
+
+.notification.unread {
+  background: var(--colorAldou2);
+}
+
+.notif_avatar {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.notif_avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.notif_content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notif_time {
+  margin-top: 5px;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.notif_close,
+.alert_close {
+  padding: 3px;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Bas du panneau */
+.notiffi_manage {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.notiffi_actions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.notiffi_actions button {
+  padding: 5px 8px;
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou2);
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Petite alerte lors d’une nouvelle notification */
+.notification.alert {
+  position: fixed;
+  z-index: 999;
+  right: 15px;
+  bottom: 15px;
+
+  width: min(350px, calc(100vw - 30px));
+  box-sizing: border-box;
+
+  background: var(--colorAldou1);
+  box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+
+  opacity: 0;
+  transform: translateY(120%);
+  transition: 300ms ease;
+}
+
+.notification.alert.up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Lien « Voir toutes les notifications » */
+#notiffi_panel .notiffi_manage > a {
+  font-size: 11px;
+}
+
+/* Boutons d’action */
+#notiffi_panel .notiffi_actions button {
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+#notiffi_panel .notiffi_actions button:hover {
+  color: var(--colorfontAldou2);
+  background: var(--colorAldou4);
+  transform: translateX(2px);
+}
