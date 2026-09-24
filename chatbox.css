@@ -1,13 +1,13 @@
 body.chatbox {
-  background-color: none;
+  background-color: transparent;
 }
 
 #chatbox {
-  background-color: #EBEDEF;
+  background-color: var(--colorAldou0);
 }
 
 #chatbox .chatbox-message-username {
- font: 12px barlow condensed;
+ font: 12px var(--fontAldou1);
 }
 
 /*Titre Personnalisé*/
@@ -18,11 +18,11 @@ body.chatbox {
 
 /*Liens de droite de la barre de titre*/
 #chatbox_header .catBottom .chatbox-options a {
-  font: 12px barlow condensed;
+  font: 12px var(--fontAldou1);
 }
 /*Liens de droite de la barre de titre au survol*/
 #chatbox_header .catBottom .chatbox-options a:hover {
-  font: 12px barlow condensed;
+  font: 12px var(--fontAldou1);
 }
 
 /*Pour arranger la hauteur de la barre du bas*/
@@ -32,7 +32,7 @@ body.chatbox {
 /*Barre du bas*/
 #chatbox_footer .catBottom {
   border: none; /*Enlève la bordure*/
-  background-color: #173221; /*Enlève couleur de fond*/
+  background-color: var(--colorAldou4); /*Enlève couleur de fond*/
   height: 29px;
 }
 
@@ -84,25 +84,25 @@ body.chatbox {
 }
 
 #chatbox_members {
-  background-color: #D6E1E6; /*Enlève couleur de fond*/
+  background-color: var(--colorAldou1); /*Enlève couleur de fond*/
   border-right: 1px solid #173221; /*Bordure entre la liste des membres et les messages*/
 }
 
 #chatbox_members .online {
-  font-family: 'Barlow Condensed', sans-serif !important;
+  font-family: var(--fontAldou1), sans-serif !important;
   text-transform: uppercase;
   font-style: oblique;
   color: #fff;
-  background-color: #B92E4B; 
+  background-color: var(--colorAldou2); 
 }
 
 /*Ligne de titre des membres absents*/
 #chatbox_members .away {
-  font-family: 'Barlow Condensed', sans-serif !important;
+  font-family: var(--fontAldou1), sans-serif !important;
   text-transform: uppercase;
   font-style: oblique;
   color: #fff;
-  background-color: #B92E4B;
+  background-color: var(--colorAldou3);
 }
 
 #chatbox_option_co strong {
@@ -114,13 +114,13 @@ body.chatbox {
   border: none; /*Enlève la bordure*/
   background-color: #173221 !important; /*Enlève couleur de fond*/
   height: 30px;
- font-family: 'Barlow Condensed', sans-serif;
+ font-family: var(--fontAldou1), sans-serif;
 }
 
 #chatbox_header .cattitle strong { display: none; }
 
 #chatbox_header .cattitle:before { 
   content: "CHATBOX DE CINZA";
- font-family: 'Barlow Condensed', sans-serif !important;
+ font-family: var(--fontAldou1), sans-serif !important;
 color: white;
 margin-left: 50px}
