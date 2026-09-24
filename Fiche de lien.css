@@ -1,0 +1,142 @@
+/* ======LIEN========*/
+
+.BoxLiens {
+  position: relative;
+  top: 30px;
+
+  box-sizing: border-box;
+  width: 550px;
+  margin: auto;
+  padding-bottom: 1px;
+
+  background : var(--colorAldou2);
+  border-radius: 20px;
+
+  font-family: var(--fontAldou1);
+}
+
+.BGTitleLiens {
+  position: relative;
+  top: -30px;
+
+  width: 500px;
+  margin: auto;
+  padding: 15px 25px;
+  font-family: var(--fontAldou2);
+  background : var(--colorAldou4);
+  border-radius: 20px;
+}
+
+.WhiteBGTitleLiens {
+  padding: 15px;
+
+  background-color: var(--colorAldou1);
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--colorAldou4);
+text-transform: uppercase;
+  font-size: 24px;
+  text-align: center;
+color : var(--colorAldou4);
+}
+
+.OiseauLiens {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  width: 70px;
+  height: auto;
+  pointer-events: none;
+}
+
+.LiensBobox {
+  display: flex;
+  gap: 10px;
+
+  height: 155px;
+  margin: 0 20px 50px;
+  
+  background-color: var(--colorAldou1);
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--colorAldou4);
+}
+
+.VavaLien {
+  width: 110px !important;
+  height: 130px !important;
+  margin-top: -10px;
+  margin-left: 20px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+.LiensInfos {
+  width: 350px;
+  margin-right: 20px;
+}
+
+.Row1Infos {
+  margin: 10px 0;
+  color: var(--colorAldou1);
+text-transform: uppercase;
+  font-size: 14px;
+}
+
+inf1,
+inf2 {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: var(--colorfontAldou1);
+}
+
+inf1 {
+  background-color: var(--colorAldou4);
+}
+
+inf2 {
+  margin-left: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: var(--colorAldou3);
+}
+
+.DescripInfos {
+  height: 80px;
+  overflow: auto;
+
+  color: var(--colorfontAldou1);
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.Appreciation {
+  position: relative;
+  top: 8px;
+  left: 200px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 140px;
+  padding: 10px 5px 5px;
+
+  color: var(--colorfontAldou2);
+  background : var(--colorAldou4); 
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.SignaNathie {
+  margin-top: 50px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.SignaNathie a {
+  color: #ddd;
+  text-decoration: none;
+}
