@@ -1,0 +1,126 @@
+body.chatbox {
+  background-color: none;
+}
+
+#chatbox {
+  background-color: #EBEDEF;
+}
+
+#chatbox .chatbox-message-username {
+ font: 12px barlow condensed;
+}
+
+/*Titre Personnalisé*/
+#chatbox_header .cattitle:before {
+  content: "Cliquez pour nous rejoindre !"; /* Modifiez NOM par le titre que vous désirez */
+  font-size: 12px;
+}
+
+/*Liens de droite de la barre de titre*/
+#chatbox_header .catBottom .chatbox-options a {
+  font: 12px barlow condensed;
+}
+/*Liens de droite de la barre de titre au survol*/
+#chatbox_header .catBottom .chatbox-options a:hover {
+  font: 12px barlow condensed;
+}
+
+/*Pour arranger la hauteur de la barre du bas*/
+#chatbox_footer {
+  height: 29px!important;
+}
+/*Barre du bas*/
+#chatbox_footer .catBottom {
+  border: none; /*Enlève la bordure*/
+  background-color: #173221; /*Enlève couleur de fond*/
+  height: 29px;
+}
+
+/*Lien de la connexion Personnalisé*/
+#chatbox_option_co strong:before {
+  content: "ENTRER SUR LA CB ;)"; /*Modifiez ENTRER SUR LA CB par ce que vous désirez*/
+  font-size: 12px;
+    color: white; 
+}
+
+/*Pour cacher le lien de la déconnexion*/
+#chatbox_option_disco {
+  font-size: 0px;
+}
+
+/*Lien de la déconnexion Personnalisé*/
+#chatbox_option_disco:before {
+  content: "QUITTER LA CHATBOX"; /*Modifiez QUITTER LA CB par ce que vous désirez*/
+  font-size: 12px;
+  color: white;
+}
+
+
+/*Pour cacher le lien pour accéder aux archives normal*/
+#chatbox_option_with_archives a {
+  font-size: 0;
+}
+/*Lien pour accéder aux archives Personnalisé*/
+#chatbox_option_with_archives a:before {
+  content: "HISTORIQUE"; /*Modifiez HISTORIQUE par ce que vous désirez*/
+  font-size: 12px;
+}
+
+/*Pour cacher le lien pour sortir des archives normal*/
+#chatbox_option_without_archives a {
+  font-size: 0px;
+}
+/*Lien pour sortir des archives Personnalisé*/
+#chatbox_option_without_archives a:before {
+  content: "QUITTER HISTORIQUE"; /*Modifiez QUITTER HISTORIQUE par ce que vous désirez*/
+  font-size: 12px;
+}
+
+/*Lien pour sortir des archives Personnalisé*/
+#chatbox_option_without_archives a:before {
+  content: "QUITTER HISTORIQUE"; /*Modifiez QUITTER HISTORIQUE par ce que vous désirez*/
+  font-size: 12px;
+  color: black;
+}
+
+#chatbox_members {
+  background-color: #D6E1E6; /*Enlève couleur de fond*/
+  border-right: 1px solid #173221; /*Bordure entre la liste des membres et les messages*/
+}
+
+#chatbox_members .online {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  text-transform: uppercase;
+  font-style: oblique;
+  color: #fff;
+  background-color: #B92E4B; 
+}
+
+/*Ligne de titre des membres absents*/
+#chatbox_members .away {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  text-transform: uppercase;
+  font-style: oblique;
+  color: #fff;
+  background-color: #B92E4B;
+}
+
+#chatbox_option_co strong {
+  font-size: 0px;
+}
+
+/*Barre de titre*/
+#chatbox_header .catBottom {
+  border: none; /*Enlève la bordure*/
+  background-color: #173221 !important; /*Enlève couleur de fond*/
+  height: 30px;
+ font-family: 'Barlow Condensed', sans-serif;
+}
+
+#chatbox_header .cattitle strong { display: none; }
+
+#chatbox_header .cattitle:before { 
+  content: "CHATBOX DE CINZA";
+ font-family: 'Barlow Condensed', sans-serif !important;
+color: white;
+margin-left: 50px}
