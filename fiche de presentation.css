@@ -167,3 +167,32 @@ color : var(--colorfontAldou2);
   object-position: center;
   border-radius: 5px;
 }
+
+.LienFichePerso {
+  position: absolute;
+  z-index: 3;
+  top: 18px;
+  right: -18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  color: var(--colorfont);
+  background: var(--color2);
+  border: 5px solid var(--white);
+  border-radius: 50%;
+
+  font-size: 20px;
+  text-decoration: none;
+  transition: 300ms ease;
+}
+
+.LienFichePerso:hover {
+  color: var(--colorfont2);
+  background: var(--color4);
+  transform: rotate(8deg) scale(1.08);
+}
