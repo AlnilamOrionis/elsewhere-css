@@ -1,0 +1,633 @@
+/*====responsive====*/
+
+
+@container (max-width: 800px) {
+  #navigation {
+    padding: 0 6px;
+  }
+
+  #navigation .navigation > a,
+  #navigation .navigation > a[href^="/search"],
+  #navigation .navigation > a[href*="memberlist"] {
+    padding: 0 4px;
+    font-size: 9px;
+  }
+}
+
+@container (max-width: 550px) {
+  #navigation {
+    right: 0;
+    left: 0;
+    height: 70px;
+    padding: 8px 5px;
+  }
+
+  #navigation .navigation {
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: 0;
+    overflow: visible;
+  }
+
+  #navigation .navigation > a,
+  #navigation .navigation > a[href^="/search"],
+  #navigation .navigation > a[href*="memberlist"] {
+    flex: 0 0 auto;
+    height: 22px;
+    padding: 0 5px;
+    font-size: 9px;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1450px) {
+  .cate-title::before,
+  .cate-sous .ssfo br {
+    display: none;
+  }
+
+  .paflex {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 35px 30px;
+    width: auto;
+    max-width: 100%;
+    margin: 30px 0 50px;
+    padding: 40px 35px;
+  }
+
+  .paflex .pagauche {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .paflex .pacontexte {
+    width: 100%;
+    height: 115px;
+    min-height: 115px;
+    max-height: 115px;
+    padding: 18px 22px;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: left;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+  .paflex .paimage {
+    width: 100%;
+    height: 180px;
+  }
+
+  .paflex .pacentre {
+    grid-column: 1;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .paflex .pascenarios,
+  .paflex .papart {
+    gap: 5px;
+  }
+
+  .paflex .padroite {
+    grid-column: 2;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .paflex .panews {
+    width: 100%;
+    height: auto;
+    min-height: 240px;
+    max-width: none;
+    margin: 0;
+  }
+
+.paflex .panew {
+  gap: 6px;
+  padding: 6px;
+  overflow: hidden;
+}
+
+.paflex .panew strong {
+  flex: 0 0 45px;
+  width: 45px;
+  height: 35px;
+  font-size: 15px;
+}
+
+.paflex .panew span {
+  display: block;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 100%;
+
+  font-size: 10px;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+  .paflex .patitre,
+  .paflex .padroite > .patitre:first-child {
+    margin: 0 0 5px;
+    font-size: 20px;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .paflex .titrestaff {
+    margin: 30px 0 0;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .paflex .pastaff {
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .paflex .pastaff div {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 80px;
+    margin: 0;
+  }
+
+  .paflex .pastaff span {
+    font-size: 11px;
+    overflow-wrap: anywhere;
+  }
+
+  .paflex .pastaff span em {
+    font-size: 8px;
+  }
+
+.cate-title,
+.cate-title:nth-child(even of .cate-title) {
+  height: auto;
+  min-height: 0;
+  margin: 30px 0 8px;
+  padding: 0 20px;
+
+  justify-content: flex-start;
+  text-align: left;
+  border-bottom: 1px solid var(--colorAldou4);
+}
+
+.cate-title h2 {
+  margin: 0;
+  text-align: left;
+  font-size: clamp(26px, 7cqw, 36px);
+  line-height: 1;
+}
+
+  .cate-forum .forum-encart {
+    margin-bottom: 65px;
+  }
+
+.cate-forum .forum-encart {
+  grid-template-columns:
+    minmax(0, 1fr)
+    clamp(135px, 24cqw, 165px);
+
+  margin-bottom: 80px;
+}
+
+  .cate-visuel {
+    overflow: visible;
+  }
+
+  .cate-visuel::before {
+    border-radius: inherit;
+  }
+
+.cate-descr {
+  justify-content: flex-start;
+  padding-top: 18px;
+}
+
+.cate-descr > span {
+  align-self: center;
+  width: clamp(90px, 22cqw, 140px);
+  transform: translateX(20px);
+  text-align: left;
+}
+
+.cate-sous {
+  grid-column: 1 / -1;
+  grid-row: auto;
+
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  right: 0;
+
+  width: auto;
+  padding: 0 10px;
+  transform: none;
+}
+
+.cate-sous .ssfo {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  width: 100%;
+  max-height: none;
+  padding: 0;
+  overflow: visible;
+}
+
+.cate-sous .ssfo a {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: auto;
+
+  margin: 0;
+  padding: 5px 10px;
+
+  color: var(--colorfontAldou2);
+  background: var(--colorAldou4);
+}
+
+  .qeelhaut {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 20px 25px;
+    gap: 20px;
+  }
+
+  .qeelhaut::before {
+    inset: 0;
+  }
+
+  .qeelnew {
+    width: 100%;
+  }
+
+  .qeelmessmem {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .qeelmessmem span {
+    min-width: 0;
+  }
+
+  .qeelcontenu {
+    flex-direction: column;
+    gap: 35px;
+    padding: 30px 45px 0;
+  }
+
+  .qeelcontenu .qeelgauche,
+  .qeelcontenu .qeeldroite {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .qeelcontenu .qeelgauche {
+    order: 1;
+  }
+
+  .qeelcontenu .qeeldroite {
+    order: 2;
+  }
+
+  .qeelgroupes {
+    gap: clamp(8px, 1.3cqw, 15px);
+  }
+
+  .qeelgroupes span {
+    flex: 0 0 clamp(45px, 5.2cqw, 60px);
+    width: clamp(45px, 5.2cqw, 60px);
+    height: clamp(45px, 5.2cqw, 60px);
+  }
+
+  .topic-card {
+    grid-template-columns:
+      38%
+      minmax(0, 1fr)
+      minmax(0, 20%);
+  }
+
+  .topic-card-title {
+    width: fit-content;
+    max-width: 10ch;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .raw-profil .raw-avatar {
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .raw-profil .raw-avatar > span:first-child {
+    margin: 0 auto;
+  }
+
+  .raw-profil .raw-other {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .cate-title::before,
+  .qeel-fiche .qeel-cle,
+  .cate-descr > span,
+  .cate-infos,
+  .cate-messvue,
+  .cate-sous .ssfo br,
+  .topic-card-stats {
+    display: none;
+  }
+
+  body:has(.forum-linkssmall)
+  .cate-title:nth-child(1 of .cate-title)::after {
+    display: none;
+  }
+
+  .paflex {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    width: auto;
+    max-width: 100%;
+    margin: 30px 0 50px;
+    padding: 40px 25px;
+  }
+
+  .paflex .patitre,
+  .paflex .padroite > .patitre:first-child {
+    margin: 0 0 -2px;
+    text-align: center;
+  }
+
+  .paflex .paliens {
+    max-width: 300px;
+    margin: 0 auto 25px;
+  }
+
+  .paflex .pascenarios,
+  .paflex .papart {
+    flex-wrap: wrap;
+  }
+
+  .paflex .padroite {
+    grid-column: auto;
+  }
+
+  .paflex .panews {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .paflex .titrestaff {
+    margin: 35px 0 0;
+    text-align: center;
+  }
+
+  .paflex .pastaff {
+    justify-content: center;
+  }
+
+  .qeelhaut {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .qeelhaut::before {
+    inset: 0;
+  }
+
+  .qeelnew {
+    width: 100%;
+  }
+
+  .qeelnew .vavaqeel {
+    flex: 0 0 75px;
+    width: 75px;
+    height: 75px;
+  }
+
+  .qeelnew .dern-in2 {
+    margin-left: 15px;
+  }
+
+  .qeelmessmem {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .qeelmessmem span {
+    flex: none;
+    width: 100%;
+  }
+
+  .qeelcontenu {
+    flex-direction: column;
+    gap: 30px;
+    padding: 25px 20px 0;
+  }
+
+  .qeelcontenu .qeelgauche,
+  .qeelcontenu .qeeldroite {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .qeelcontenu .qeelgauche {
+    order: 1;
+  }
+
+  .qeelcontenu .qeeldroite {
+    order: 2;
+  }
+
+  .qeelgroupes {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .qeelgroupes span {
+    width: 50px;
+    height: 50px;
+  }
+
+  .qeeldgroupes .qeel-fiche {
+    width: 100%;
+    min-height: 0;
+    padding: 25px;
+  }
+
+.cate-title,
+.cate-title:nth-child(even of .cate-title) {
+  height: auto;
+  min-height: 0;
+  margin: 35px 0 18px;
+  padding: 0 20px 7px;
+
+  justify-content: flex-start;
+  text-align: left;
+
+  border-bottom: 2px solid var(--colorAldou3);
+}
+
+.cate-title h2 {
+  margin: 0;
+  font-size: clamp(28px, 7cqw, 40px);
+  line-height: 1;
+  text-align: left;
+}
+
+/* CARTE DU FORUM */
+
+.cate-forum .forum-encart {
+  display: block;
+  padding: 0;
+}
+
+.cate-visuel {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: auto 1fr;
+
+  width: 100%;
+  min-height: 280px;
+}
+
+/* TITRE DU FORUM EN HAUT */
+
+.cate-descr {
+  grid-column: 2;
+  grid-row: 1;
+
+  width: auto;
+  margin: 0;
+  padding: 24px 30px 8px;
+  transform: none;
+
+  justify-content: flex-start;
+}
+
+.cate-descr .forumtitle {
+  font-size: clamp(24px, 6cqw, 32px);
+  line-height: 1;
+  text-align: center;
+}
+
+/* DESCRIPTION CACHÉE */
+
+/* DERNIER MESSAGE CACHÉ */
+
+/* SOUS-FORUMS */
+
+.cate-sous {
+  grid-column: 2;
+  grid-row: 2;
+
+  width: auto;
+  padding: 0 30px 24px;
+  transform: none;
+  align-self: start;
+}
+
+.cate-sous .ssfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 100%;
+  height: auto;
+  max-height: none;
+  padding: 0;
+  overflow: visible;
+}
+
+.cate-sous .ssfo a {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 9px 14px;
+
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou0);
+  border-radius: 20px;
+
+  font-size: clamp(13px, 3cqw, 16px);
+  line-height: 1;
+  text-align: center;
+}
+
+  .topic-card {
+    grid-template-columns:
+      minmax(0, 1fr)
+      calc(var(--topic-height) / 2)
+      clamp(145px, 40%, 220px);
+  }
+
+  /* Cache réponses et vues */
+
+  .topic-card-main {
+    grid-column: 1;
+  }
+
+  .topic-card-last {
+    grid-column: 3;
+    width: 100%;
+  }
+
+  .raw-profil .raw-avatar {
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .raw-profil .raw-avatar > span:first-child {
+    margin: 0 auto;
+  }
+
+  .raw-profil .raw-other {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .raw-champs > .raw-champ:nth-child(1),
+  .raw-champs > .raw-champ:nth-child(5),
+  .raw-champs > .raw-champ:nth-child(11) {
+    margin-top: 70px;
+  }
+
+  .raw-champs > .raw-champ:nth-child(1)::before,
+  .raw-champs > .raw-champ:nth-child(5)::before,
+  .raw-champs > .raw-champ:nth-child(11)::before {
+    font-size: 16px;
+    line-height: 1.15;
+  }
+
+.raw-champ {
+  grid-template-columns: 1fr;
+  row-gap: 2px;
+  margin-bottom: 8px;
+}
+}
