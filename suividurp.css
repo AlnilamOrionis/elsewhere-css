@@ -1,0 +1,174 @@
+/*--------PAGE--------*/
+
+.BoxEnteteLiensRP {
+  box-sizing: border-box;
+  width: 550px;
+  margin: 20px auto 0;
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou1);
+}
+
+.BoxTopEnteteLiensRP {
+  height: 170px;
+  background: var(--colorAldou2);
+  border-radius: 20px;
+}
+
+.BGTitleEnteteLiensRP {
+  position: relative;
+  top: 20px;
+  left: -30px;
+
+  width: 600px;
+  margin: auto;
+  padding: 15px 25px;
+
+  background: var(--colorAldou4);
+  border-radius: 5px;
+}
+
+.TitleEneteLiensRP {
+  margin-left: 150px;
+  font-family: var(--fontAldou2);
+  color: var(--fontcolorAldou2);
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.SSEneteteLiensRP {
+  position: relative;
+  top: 40px;
+  left: 180px;
+
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+
+  overflow: hidden;
+
+  background-color: var(--colorAldou0);
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--colorAldou4);
+  font-size: 14px;
+  text-align: center;
+}
+
+.LiensEnteteVavaRP {
+  position: relative;
+  z-index: 1;
+  top: -105px;
+  left: 25px;
+
+  width: 110px !important;
+  height: 200px !important;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 10px;
+}
+
+.CadreRPs {
+  margin-bottom: 20px;
+}
+
+.CadreRPs a {
+  color: var(--colorAldou2);
+  text-decoration: none;
+}
+
+.Minipiaf {
+  position: relative;
+  top: 45px;
+  left: 10px;
+}
+
+.piaf {
+  width: 70px;
+}
+
+.RPTi {
+  margin-bottom: 5px;
+  margin-left: 80px;
+
+  color: var(--colorAldou3);
+  text-transform: uppercase;
+}
+
+.RPTi2 {
+  margin-bottom: 5px;
+  margin-left: 20px;
+
+  color: var(--colorAldou3);
+  text-transform: uppercase;
+}
+
+.BoxPlusRP {
+  padding: 5px;
+
+  background : var(--colorAldou4); 
+  border-radius: 20px;
+}
+
+.RPPlus {
+  height: 200px;
+  padding: 10px;
+
+  overflow: auto;
+
+  background-color: var(--colorAldou0);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: justify;
+  border-radius: 20px;
+}
+
+inf4 {
+  display: inline-block;
+  padding: 5px 15px;
+
+  color: var(--white);
+  background-color: var(--colorAldou4);
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-family: var(--fontAldou2);
+  font-size: 16px;
+}
+
+inf3 {
+  display: inline-block;
+  padding: 5px 15px;
+
+  color: var(--white);
+  background-color: var(--colorAldou3);
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-family: var(--fontAldou2);
+  font-size: 16px;
+}
+
+.RPsFinished {
+  margin-bottom: 10px;
+}
+
+.RowRPF {
+  margin-bottom: 5px;
+}
+
+.DescRPF {
+  height: 60px;
+  overflow: auto;
+}
+
+.SignaNathie {
+  margin-top: 40px;
+
+  font-size: 10px;
+  text-align: center;
+}
+
+.SignaNathie a {
+  color: #ddd;
+  text-decoration: none;
+}
