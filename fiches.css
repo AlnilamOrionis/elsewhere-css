@@ -1,0 +1,1204 @@
+/*=====fiche perso=======*/
+
+.BoxEntetePrez {
+    box-sizing: border-box;
+    width: 550px;
+      max-width: calc(100% - 40px);
+    margin: 20px auto 0;
+
+    color: var(--colorfontAldou1);
+    font-family: var(--fontAldou1);
+}
+
+.Img2Prez {
+    padding-bottom: 70px;
+}
+
+.BoxTopEntetePrez {
+    padding-bottom: 1px;
+    position: relative;
+    background: var(--colorAldou2);
+    border-radius: 20px;
+}
+
+.BGTitleEntetePrez {
+    position: relative;
+    top: 20px;
+    left: -20px;
+    margin: auto;
+    padding: 15px 25px;
+    background: var(--colorAldou4);
+    border-radius: 20px;
+}
+
+.TitleEnetePrez {
+    margin-left: 150px;
+    font-family: var(--fontAldou2);
+    color: var(--colorfontAldou2);
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.LiensEnteteVavaPrez {
+    position: relative;
+    z-index: 2;
+    top: -75px;
+    left: 25px;
+    width: 110px !important;
+    height: 130px !important;
+    object-fit: cover !important;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.IDChampPrez {
+    box-sizing: border-box;
+    position: absolute;
+
+    top: 90px;
+    left: 145px;
+    right: 15px;
+
+    width: auto;
+    max-width: 390px;
+
+    padding: 5px;
+
+    background: var(--colorAldou3);
+    border: 1px solid var(--colorAldou1);
+    border-radius: 5px;
+}
+
+.InsideIDPrez {
+    height: 130px;
+    padding: 10px;
+
+    overflow: auto;
+    background-color: var(--colorAldou1);
+    border-radius: 5px;
+
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.ImgPrez2 {
+    position: relative;
+    z-index: 2;
+    top: -60px;
+    left: 25px;
+    width: 110px !important;
+    height: 130px !important;
+    object-fit: cover !important;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.AxolotlDecoPrez {
+    position: absolute;
+    z-index: 3;
+    top: 225px;
+    right: 15px;
+    left: auto;
+
+    width: 70px;
+    height: auto;
+}
+
+.CrowDecoPrez {
+    position: absolute;
+    z-index: 3;
+    right: 70px;
+    bottom: -8px;
+    width: 70px;
+}
+
+pa1, 
+pa2 {
+    text-transform: uppercase;
+}
+
+pa1 { 
+    color: var(--colorAldou4);
+}
+
+pa2 {
+    color: var(--colorAldou3);
+}
+
+.InfoPersoPrezTi {
+    position: relative;
+    left: 40px;
+    top: -120px;
+    width: fit-content;
+    padding: 10px;
+    font-family: var(--fontAldou2);
+    color: var(--colorfontAldou2);
+    background-color: var(--colorAldou4);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.BorderInfPrez {
+    box-sizing: border-box;
+    margin-top: -140px;
+    width: calc(100% - 40px);
+    max-width: 510px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    padding: 25px 10px 10px;
+    background-color: var(--colorAldou1);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--colorAldou4);
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.InfoPersoPrez {
+    height: 200px;
+    overflow: auto;
+}
+
+.BlocPrez {
+    display: flex;
+    gap: 20px;
+    width: calc(100% - 40px);
+    max-width: 510px;
+    margin: 0 10px 0 25px;
+}
+
+.AnecdotesPrez,
+.QuestionsPrez {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.AnecBoxPrez,
+.QueBoxPrez {
+    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    padding: 25px 10px 10px;
+
+    overflow: auto;
+    background-color: var(--colorAldou1);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--colorAldou4);
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.InsideAnecPrez,
+.InsideQuePrez {
+    height: 165px;
+    overflow: auto;
+}
+
+.AneTiPrez {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    font-family: var(--fontAldou2);
+    width: fit-content;
+    padding: 10px;
+    color: var(--colorfontAldou1);
+    background-color: var(--colorAldou3);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.QueTiPrez {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    font-family: var(--fontAldou2);
+    width: fit-content;
+    padding: 10px;
+    color: var(--colorfontAldou2);
+    background-color: var(--colorAldou4);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.BlocGifPrez {
+    display: block;
+    width: 245px !important;
+    height: 115px !important;
+    object-fit: cover !important;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.HisPersoPrezTi {
+    position: relative;
+    top: 20px;
+    left: 40px;
+    width: fit-content;
+    padding: 10px;
+    text-transform: uppercase;
+    color: var(--colorfontAldou1);
+    background-color: var(--colorAldou3);
+    border-radius: 10px;
+    font-family: var(--fontAldou2);
+    font-size: 18px;
+}
+
+.BoxHisPersoPrez {
+    box-sizing: border-box;
+
+    width: calc(100% - 40px);
+    max-width: 510px;
+
+    height: 300px;
+    margin: 0 auto 10px;
+
+    padding: 25px 10px 10px;
+
+    overflow: auto;
+    background-color: var(--colorAldou1);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--colorAldou4);
+
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.HisanecPrezTi {
+    position: relative;
+    top: 20px;
+    left: 40px;
+    width: fit-content;
+    padding: 10px;
+    text-transform: uppercase;
+    color: var(--colorfontAldou2);
+    background-color: var(--colorAldou4);
+    border-radius: 10px;
+    font-family: var(--fontAldou2);
+    font-size: 18px;
+}
+
+.BoxHisanecPrez {
+    box-sizing: border-box;
+
+    width: calc(100% - 40px);
+    max-width: 510px;
+
+    height: 150px;
+    margin: 0 auto 10px;
+
+    padding: 25px 10px 10px;
+
+    overflow: auto;
+    background-color: var(--colorAldou1);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--colorAldou4);
+
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.HisanecPrez {
+    height: 110px;
+    overflow: auto;
+}
+
+.HisanecPrez {
+    width: 100%;
+    min-width: 0;
+    height: 110px;
+    overflow: auto;
+}
+
+.InfoJoueurPrez {
+    position: relative;
+    margin: 0 10px 15px 25px;
+}
+
+.InfoPseudoPrez {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    font-family: var(--fontAldou2);
+    width: fit-content;
+    padding: 10px;
+    text-transform: uppercase;
+    color: var(--colorfontAldou1);
+    background-color: var(--colorAldou3);
+    border-radius: 10px;
+
+    font-size: 18px;
+}
+
+.BlocJoueurPrez {
+    display: flex;
+}
+
+.BoxInfosJoueurPrez {
+    width: 405px;
+    height: 85px;
+    padding: 20px 20px 10px 10px;
+
+    overflow: auto;
+    background-color: var(--colorAldou1);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--colorAldou3);
+
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.InfosJoueurPrez {
+    height: 50px;
+    overflow: auto;
+}
+
+.JoueurGifPrez {
+    width: 115px !important;
+    height: 115px !important;
+    margin-top: -10px;
+    margin-left: -20px;
+
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.ContJoueurPrez {
+    height: fit-content;
+    padding: 5px;
+    border: 1px solid var(--colorAldou1);
+    background: var(--colorAldou3);
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.SignaNathie {
+    margin-top: 20px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.SignaNathie a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+/* ===== FICHE DE PRESENTATION ===== */
+
+.BoxEnteteLiens {
+  box-sizing: border-box;
+  width: 550px;
+  margin: 20px auto 0;
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou1);
+}
+
+.BoxTopEnteteLiens {
+  height: 170px;
+  background : var(--colorAldou2);
+  background-size: 33%;
+  border-radius: 20px;
+}
+
+.BGTitleEnteteLiens {
+  position: relative;
+  top: 20px;
+  left: -30px;
+  width: 600px;
+  margin: auto;
+  padding: 15px 25px;
+  background : var(--colorAldou4);
+  border-radius: 20px;
+}
+
+.TitleEneteLiens {
+  margin-left: 150px;
+  color: var(--colorAldou0);
+  font-family: var(--fontAldou2);
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.SSEneteteLiens {
+  position: relative;
+  top: 40px;
+  left: 180px;
+width: calc(100% - 200px);
+max-width: 300px;
+  height: 40px;
+  padding: 10px;
+  overflow: hidden;
+  background-color: var(--colorAldou0);
+  box-shadow: 0 0 5px var(--colorAldou4);
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.LiensEnteteVava {
+  position: relative;
+  z-index: 1;
+  top: -105px;
+  left: 25px;
+  width: 110px !important;
+  height: 200px !important;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.InfosGen {
+  width: 400px;
+  margin: 30px auto 0;
+  padding: 10px 25px;
+  background : var(--colorAldou4);
+color : var(--colorfontAldou2);
+  font-family: var(--fontAldou2);
+  border-radius: 20px;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ZoneAdj {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.Adj1,
+.Adj2 {
+  width: 120px;
+  padding: 5px;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.Adj1 {
+  background-color: var(--colorAldou3);
+}
+
+.Adj2 {
+  background-color: var(--colorAldou2);
+}
+
+.PlusInfo {
+  position: relative;
+  top: -30px;
+}
+
+.Minipioupiou {
+  position: relative;
+  top: 45px;
+  left: 10px;
+}
+
+.pioupiou {
+  width: 70px;
+}
+
+.InfoTi {
+  margin: 0 0 5px 70px;
+  color: var(--colorfontAldou1);
+  text-transform: uppercase;
+}
+
+.BoxPlusInfo {
+  padding: 5px;
+  background : var(--colorAldou4);
+  border-radius: 5px;
+}
+
+.InfoPlus {
+  height: 200px;
+  padding: 10px;
+  overflow: auto;
+  background-color: var(--colorAldou0);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.ZoneGifs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: -15px;
+  padding: 20px;
+  background : var(--colorAldou2);
+  background-size: 33%;
+  border-radius: 20px;
+}
+
+.MiniMess {
+  width: 80px;
+  height: 60px;
+  padding: 10px;
+  overflow: auto;
+  background-color: var(--colorAldou1);
+  box-shadow: 0 0 5px var(--colorAldou4);
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.GifsGen {
+  width: 90px !important;
+  height: 60px !important;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+.LienFichePerso {
+  position: absolute;
+  z-index: 3;
+  top: 18px;
+  right: -18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  color: var(--colorfont);
+  background: var(--color2);
+  border: 5px solid var(--white);
+  border-radius: 50%;
+
+  font-size: 20px;
+  text-decoration: none;
+  transition: 300ms ease;
+}
+
+.LienFichePerso:hover {
+  color: var(--colorfont2);
+  background: var(--color4);
+  transform: rotate(8deg) scale(1.08);
+}
+
+/* ======LIEN========*/
+
+.BoxLiens {
+  position: relative;
+  top: 30px;
+
+  box-sizing: border-box;
+  width: 550px;
+  margin: auto;
+  padding-bottom: 1px;
+
+  background : var(--colorAldou2);
+  border-radius: 20px;
+
+  font-family: var(--fontAldou1);
+}
+
+.BGTitleLiens {
+  position: relative;
+  top: -30px;
+
+  width: 500px;
+  margin: auto;
+  padding: 15px 25px;
+  font-family: var(--fontAldou2);
+  background : var(--colorAldou4);
+  border-radius: 20px;
+}
+
+.WhiteBGTitleLiens {
+  padding: 15px;
+
+  background-color: var(--colorAldou1);
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--colorAldou4);
+text-transform: uppercase;
+  font-size: 24px;
+  text-align: center;
+color : var(--colorAldou4);
+}
+
+.OiseauLiens {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  width: 70px;
+  height: auto;
+  pointer-events: none;
+}
+
+.LiensBobox {
+  display: flex;
+  gap: 10px;
+
+  height: 155px;
+  margin: 0 20px 50px;
+  
+  background-color: var(--colorAldou1);
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--colorAldou4);
+}
+
+.VavaLien {
+  width: 110px !important;
+  height: 130px !important;
+  margin-top: -10px;
+  margin-left: 20px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+.LiensInfos {
+  width: 350px;
+  margin-right: 20px;
+}
+
+.Row1Infos {
+  margin: 10px 0;
+  color: var(--colorAldou1);
+text-transform: uppercase;
+  font-size: 14px;
+}
+
+inf1,
+inf2 {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: var(--colorfontAldou1);
+}
+
+inf1 {
+  background-color: var(--colorAldou4);
+}
+
+inf2 {
+  margin-left: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: var(--colorAldou3);
+}
+
+.DescripInfos {
+  height: 80px;
+  overflow: auto;
+
+  color: var(--colorfontAldou1);
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.Appreciation {
+  position: relative;
+  top: 8px;
+ margin-left: auto;
+margin-right: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 140px;
+  padding: 10px 5px 5px;
+
+  color: var(--colorfontAldou2);
+  background : var(--colorAldou4); 
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.SignaNathie {
+  margin-top: 50px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.SignaNathie a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+/*========SUIVI RP==============*/
+
+.BoxEnteteLiensRP {
+  box-sizing: border-box;
+  width: 550px;
+  margin: 20px auto 0;
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou1);
+}
+
+.BoxTopEnteteLiensRP {
+  height: 170px;
+  background: var(--colorAldou2);
+  border-radius: 20px;
+}
+
+.BGTitleEnteteLiensRP {
+  position: relative;
+  top: 20px;
+  left: -30px;
+
+  width: 600px;
+  margin: auto;
+  padding: 15px 25px;
+
+  background: var(--colorAldou4);
+  border-radius: 5px;
+}
+
+.TitleEneteLiensRP {
+  margin-left: 150px;
+  font-family: var(--fontAldou2);
+  color: var(--fontcolorAldou2);
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.SSEneteteLiensRP {
+  position: relative;
+  top: 40px;
+  left: 180px;
+
+  width: calc(100% - 200px);
+  max-width: 300px;
+  height: 40px;
+  padding: 10px;
+
+  overflow: hidden;
+
+  background-color: var(--colorAldou0);
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--colorAldou4);
+  font-size: 14px;
+  text-align: center;
+}
+
+.LiensEnteteVavaRP {
+  position: relative;
+  z-index: 1;
+  top: -105px;
+  left: 25px;
+
+  width: 110px !important;
+  height: 200px !important;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 10px;
+}
+
+.CadreRPs {
+  margin-bottom: 20px;
+}
+
+.CadreRPs a {
+  color: var(--colorAldou2);
+  text-decoration: none;
+}
+
+.Minipiaf {
+  position: relative;
+  top: 45px;
+  left: 10px;
+}
+
+.piaf {
+  width: 70px;
+}
+
+.RPTi {
+  margin-bottom: 5px;
+  margin-left: 80px;
+
+  color: var(--colorAldou3);
+  text-transform: uppercase;
+}
+
+.RPTi2 {
+  margin-bottom: 5px;
+  margin-left: 20px;
+
+  color: var(--colorAldou3);
+  text-transform: uppercase;
+}
+
+.BoxPlusRP {
+  padding: 5px;
+
+  background : var(--colorAldou4); 
+  border-radius: 20px;
+}
+
+.RPPlus {
+  height: 200px;
+  padding: 10px;
+
+  overflow: auto;
+
+  background-color: var(--colorAldou0);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: justify;
+  border-radius: 20px;
+}
+
+inf4 {
+  display: inline-block;
+  padding: 5px 15px;
+
+  color: var(--white);
+  background-color: var(--colorAldou4);
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-family: var(--fontAldou2);
+  font-size: 16px;
+}
+
+inf3 {
+  display: inline-block;
+  padding: 5px 15px;
+
+  color: var(--white);
+  background-color: var(--colorAldou3);
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-family: var(--fontAldou2);
+  font-size: 16px;
+}
+
+.RPsFinished {
+  margin-bottom: 10px;
+}
+
+.RowRPF {
+  margin-bottom: 5px;
+}
+
+.DescRPF {
+  height: 60px;
+  overflow: auto;
+}
+
+.SignaNathie {
+  margin-top: 40px;
+
+  font-size: 10px;
+  text-align: center;
+}
+
+.SignaNathie a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+/*========Scenario==============*/
+.BoxEntetePL {
+  box-sizing: border-box;
+  width: 550px;
+  margin: 20px auto 0;
+
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou1);
+}
+
+.BoxTopEntetePL {
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 1px;
+
+  background: var(--colorAldou2);
+  border-radius: 20px;
+}
+
+.BGTitleEntetePL {
+  position: relative;
+  top: 20px;
+  left: -30px;
+
+  width: 600px;
+  margin: auto;
+  padding: 15px 25px;
+
+  background : var(--colorAldou4);
+  border-radius: 20px;
+}
+
+.TitleEnetePL {
+  margin-left: 150px;
+  font-family: var(--fontAldou2);
+  color: var(--colorfontAldou2);
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.LiensEnteteVavaPL {
+  position: relative;
+  z-index: 2;
+  top: -75px;
+  left: 25px;
+
+  width: 110px !important;
+  height: 130px !important;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 10px;
+}
+
+.DecoLine {
+  position: relative;
+  z-index: 1;
+  top: -100px;
+  left: 55px;
+
+  width: 50px;
+  height: 150px;
+
+  background: var(--colorAldou4);
+  border-radius: 20px;
+}
+
+.IDChampPL {
+  box-sizing: border-box;
+
+  width: calc(100% - 60px);
+  max-width: 480px;
+
+  position: relative;
+  top: -250px;
+  left: 40px;
+
+  padding: 5px;
+
+  background: var(--colorAldou4);
+  color: var(--colorfontAldou1);
+  border: 1px solid var(--colorAldou0);
+  border-radius: 20px;
+}
+
+.InsideID {
+  height: 130px;
+  padding: 10px 10px 10px 100px;
+
+  overflow: auto;
+
+  background-color: var(--colorAldou0);
+  border-radius: 20px;
+
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.MiniAxolotlDeco {
+  width: 50px;
+  overflow: visible;
+}
+
+.BoxEntetePL .DecoLine .MiniAxolotlDeco img.AxolotlDeco {
+  position: relative;
+  top : 30px; 
+  left: -10px;
+  z-index: 3;
+
+  display: block !important;
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+  height: auto !important;
+
+  transform: none !important;
+}
+
+pa1 {
+  font-size : 18px; 
+  font-family: var(--fontAldou2);
+  text-transform: uppercase;
+}
+
+pa2 {
+  font-size : 18px; 
+  font-family: var(--fontAldou2);
+  text-transform: uppercase;
+}
+
+.InfoPersoPLTi {
+  position: relative;
+  top: -220px;
+  left: 55px;
+
+  width: fit-content;
+  padding: 10px;
+  font-family: var(--fontAldou2);
+  color: var(--colorAldou0);
+  background: var(--colorAldou3);
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.BorderInfoPL {
+
+  max-width: 470px; 
+    width: 470px; 
+
+  margin-top: -240px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 25px 10px 10px;
+
+  background: var(--colorAldou0);
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--colorAldou4);
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.InfoPersoPL {
+  height: 200px;
+  overflow: auto;
+}
+
+.PLLiens {
+  display: flex;
+  gap: 10px;
+
+  width: 470px;
+  height: 100px;
+margin: auto;
+margin-bottom: 40px;
+
+  background-color: var(--colorAldou0);
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--colorAldou4);
+}
+
+.PLVavaLiens {
+  width: 120px !important;
+  height: 120px !important;
+  margin-top: -10px;
+  margin-left: 20px;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+  border-radius: 5px;
+}
+
+.ImgPLLiens {
+  flex-shrink: 0;
+}
+
+.RowInfoPL {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.DescInfoPL {
+  height: 60px;
+  padding-right: 10px;
+
+  overflow: auto;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+inf5 {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 18px;
+  color: var(--colorfontAldou2);
+  background-color: var(--colorAldou4);
+  border-radius: 20px;
+  font-family: var(--fontAldou2);
+  text-transform: uppercase;
+}
+
+inf6 {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 18px;
+  color: var(--colorfontAldou2);
+  background-color: var(--colorAldou3);
+  border-radius: 20px;
+  font-family: var(--fontAldou2);
+  text-transform: uppercase;
+}
+
+.InfoToKnowPL {
+  margin-top: 20px;
+  padding: 20px;
+
+  background : var(--colorAldou2);
+  border-radius: 20px;
+}
+
+.ToKnowTiPL {
+  position: relative;
+  top: 15px;
+
+  width: fit-content;
+  margin-left: 20px;
+  padding: 10px;
+
+  color: var(--colorAldou0);
+  background-color: var(--colorAldou4);
+  border-radius: 20px;
+  font-family: var(--fontAldou2);
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.BorderInfoKnowPL {
+  padding: 20px 10px 10px;
+
+  background-color: var(--colorAldou0);
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--colorAldou4);
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.InfoKnowPL {
+  height: 150px;
+  overflow: auto;
+}
+
+.SignaNathie {
+  margin-top: 20px;
+
+  font-size: 10px;
+  text-align: center;
+}
+
+.SignaNathie a {
+  color: #ddd;
+  text-decoration: none;
+}
