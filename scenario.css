@@ -1,0 +1,275 @@
+/*Scenario---------*/
+.BoxEntetePL {
+  box-sizing: border-box;
+  width: 550px;
+  margin: 20px auto 0;
+
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou1);
+}
+
+.BoxTopEntetePL {
+  padding-bottom: 1px;
+
+  background: var(--colorAldou2);
+  border-radius: 20px;
+}
+
+.BGTitleEntetePL {
+  position: relative;
+  top: 20px;
+  left: -30px;
+
+  width: 600px;
+  margin: auto;
+  padding: 15px 25px;
+
+  background : var(--colorAldou4);
+  border-radius: 20px;
+}
+
+.TitleEnetePL {
+  margin-left: 150px;
+  font-family: var(--fontAldou2);
+  color: var(--colorfontAldou2);
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.LiensEnteteVavaPL {
+  position: relative;
+  z-index: 2;
+  top: -75px;
+  left: 25px;
+
+  width: 110px !important;
+  height: 130px !important;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 10px;
+}
+
+.DecoLine {
+  position: relative;
+  z-index: 1;
+  top: -100px;
+  left: 55px;
+
+  width: 50px;
+  height: 150px;
+
+  background: var(--colorAldou4);
+  border-radius: 20px;
+}
+
+.IDChampPL {
+  position: relative;
+  top: -250px;
+  left: 40px;
+
+  width: 480px;
+  padding: 5px;
+
+  background : var(--colorAldou4);
+  color: var(--colorfontAldou1);
+  border: 1px solid var(--colorAldou0);
+  border-radius: 20px;
+}
+
+.InsideID {
+  height: 130px;
+  padding: 10px 10px 10px 100px;
+
+  overflow: auto;
+
+  background-color: var(--colorAldou0);
+  border-radius: 20px;
+
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.MiniAxolotlDeco {
+  width: 50px;
+  overflow: visible;
+}
+
+.BoxEntetePL .DecoLine .MiniAxolotlDeco img.AxolotlDeco {
+  position: relative;
+  top : 30px; 
+  left: -10px;
+  z-index: 3;
+
+  display: block !important;
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+  height: auto !important;
+
+  transform: none !important;
+}
+
+pa1 {
+  font-size : 18px; 
+  font-family: var(--fontAldou2);
+  text-transform: uppercase;
+}
+
+pa2 {
+  font-size : 18px; 
+  font-family: var(--fontAldou2);
+  text-transform: uppercase;
+}
+
+.InfoPersoPLTi {
+  position: relative;
+  top: -220px;
+  left: 55px;
+
+  width: fit-content;
+  padding: 10px;
+  font-family: var(--fontAldou2);
+  color: var(--colorAldou0);
+  background: var(--colorAldou3);
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.BorderInfoPL {
+  width: 470px;
+  margin-top: -240px;
+  margin-bottom: 30px;
+  margin-left: 40px;
+  padding: 25px 10px 10px;
+
+  background: var(--colorAldou0);
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--colorAldou4);
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.InfoPersoPL {
+  height: 200px;
+  overflow: auto;
+}
+
+.PLLiens {
+  display: flex;
+  gap: 10px;
+
+  width: 470px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 40px;
+
+  background-color: var(--colorAldou0);
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--colorAldou4);
+}
+
+.PLVavaLiens {
+  width: 120px !important;
+  height: 120px !important;
+  margin-top: -10px;
+  margin-left: 20px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 5px;
+}
+
+.RowInfoPL {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.DescInfoPL {
+  height: 60px;
+  padding-right: 10px;
+
+  overflow: auto;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+inf5 {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 18px;
+  color: var(--colorfontAldou2);
+  background-color: var(--colorAldou4);
+  border-radius: 20px;
+  font-family: var(--fontAldou2);
+  text-transform: uppercase;
+}
+
+inf6 {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 18px;
+  color: var(--colorfontAldou2);
+  background-color: var(--colorAldou3);
+  border-radius: 20px;
+  font-family: var(--fontAldou2);
+  text-transform: uppercase;
+}
+
+.InfoToKnowPL {
+  margin-top: 20px;
+  padding: 20px;
+
+  background : var(--colorAldou2);
+  border-radius: 20px;
+}
+
+.ToKnowTiPL {
+  position: relative;
+  top: 15px;
+
+  width: fit-content;
+  margin-left: 20px;
+  padding: 10px;
+
+  color: var(--colorAldou0);
+  background-color: var(--colorAldou4);
+  border-radius: 20px;
+  font-family: var(--fontAldou2);
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.BorderInfoKnowPL {
+  padding: 20px 10px 10px;
+
+  background-color: var(--colorAldou0);
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--colorAldou4);
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.InfoKnowPL {
+  height: 150px;
+  overflow: auto;
+}
+
+.SignaNathie {
+  margin-top: 20px;
+
+  font-size: 10px;
+  text-align: center;
+}
+
+.SignaNathie a {
+  color: #ddd;
+  text-decoration: none;
+}
