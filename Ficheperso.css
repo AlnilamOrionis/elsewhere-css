@@ -1,0 +1,337 @@
+/*=====fiche perso=======*/
+
+.BoxEntetePrez {
+    box-sizing: border-box;
+    width: 550px;
+    margin: 20px auto 0;
+
+    color: var(--colorfontAldou1);
+    font-family: var(--fontAldou1);
+}
+
+.Img2Prez {
+    padding-bottom: 70px;
+}
+
+.BoxTopEntetePrez {
+    padding-bottom: 1px;
+    position: relative;
+    background: var(--colorAldou2);
+    background-repeat: repeat;
+    background-position: fixed;
+    background-size: 33%;
+    border-radius: 20px;
+}
+
+.BGTitleEntetePrez {
+    position: relative;
+    top: 20px;
+    left: -20px;
+    margin: auto;
+    padding: 15px 25px;
+    background: var(--colorAldou4);
+    border-radius: 20px;
+}
+
+.TitleEnetePrez {
+    margin-left: 150px;
+    font-family: var(--fontAldou2);
+    color: var(--colorfontAldou2);
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.LiensEnteteVavaPrez {
+    position: relative;
+    z-index: 2;
+    top: -75px;
+    left: 25px;
+    width: 110px !important;
+    height: 130px !important;
+    object-fit: cover !important;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.IDChampPrez {
+    box-sizing: border-box;
+    position: relative;
+    top: -290px;
+    left: 145px;
+
+    width: 390px;
+    padding: 5px;
+
+    background: var(--colorAldou3);
+    background-position: fixed;
+    background-size: cover;
+    border: 1px solid var(--colorAldou1);
+    border-radius: 5px;
+}
+
+.InsideIDPrez {
+    height: 130px;
+    padding: 10px;
+
+    overflow: auto;
+    background-color: var(--colorAldou1);
+    border-radius: 5px;
+
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.ImgPrez2 {
+    position: relative;
+    z-index: 2;
+    top: -60px;
+    left: 25px;
+    width: 110px !important;
+    height: 130px !important;
+    object-fit: cover !important;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.AxolotlDecoPrez {
+    position: absolute;
+    z-index: 3;
+    top: 225px;
+    right: 15px;
+    left: auto;
+
+    width: 70px;
+    height: auto;
+}
+
+.CrowDecoPrez {
+    position: absolute;
+    z-index: 3;
+    right: 70px;
+    bottom: -8px;
+    width: 70px;
+}
+
+pa1, 
+pa2 {
+    text-transform: uppercase;
+}
+
+pa1 { 
+    color: var(--colorAldou4);
+}
+
+pa2 {
+    color: var(--colorAldou3);
+}
+
+.InfoPersoPrezTi {
+    position: relative;
+    top: -260px;
+    left: 40px;
+
+    width: fit-content;
+    padding: 10px;
+    font-family: var(--fontAldou2);
+    color: var(--colorfontAldou2);
+    background-color: var(--colorAldou4);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.BorderInfPrez {
+    box-sizing: border-box;
+    width: 510px;
+    margin-top: -280px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    padding: 25px 10px 10px;
+    background-color: var(--colorAldou1);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--colorAldou4);
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.InfoPersoPrez {
+    height: 200px;
+    overflow: auto;
+}
+
+.BlocPrez {
+    display: flex;
+    gap: 20px;
+    margin: 0 10px 0 25px;
+}
+
+.AnecBoxPrez,
+.QueBoxPrez {
+    height: 200px;
+    margin-bottom: 10px;
+    padding: 25px 10px 10px;
+
+    overflow: auto;
+    background-color: var(--colorAldou1);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--colorAldou4);
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.InsideAnecPrez,
+.InsideQuePrez {
+    height: 165px;
+    overflow: auto;
+}
+
+.AneTiPrez {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    font-family: var(--fontAldou2);
+    width: fit-content;
+    padding: 10px;
+    color: var(--colorfontAldou1);
+    background-color: var(--colorAldou3);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.QueTiPrez {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    font-family: var(--fontAldou2);
+    width: fit-content;
+    padding: 10px;
+    color: var(--colorfontAldou2);
+    background-color: var(--colorAldou4);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.BlocGifPrez {
+    display: block;
+    width: 245px !important;
+    height: 115px !important;
+    object-fit: cover !important;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.HisPersoPrezTi {
+    position: relative;
+    top: 20px;
+    left: 40px;
+    width: fit-content;
+    padding: 10px;
+    text-transform: uppercase;
+    color: var(--colorfontAldou1);
+    background-color: var(--colorAldou3);
+    border-radius: 10px;
+    font-family: var(--fontAldou2);
+    font-size: 18px;
+}
+
+.BoxHisPersoPrez {
+    width: 510px;
+    height: 300px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    padding: 25px 10px 10px;
+    box-sizing: border-box;
+    overflow: auto;
+    background-color: var(--colorAldou1);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--colorAldou4);
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.HisPersoPrez {
+    height: 265px;
+    overflow: auto;
+}
+
+.InfoJoueurPrez {
+    position: relative;
+    margin: 0 10px 15px 25px;
+}
+
+.InfoPseudoPrez {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    font-family: var(--fontAldou2);
+    width: fit-content;
+    padding: 10px;
+    text-transform: uppercase;
+    color: var(--colorfontAldou2);
+    background-color: var(--colorAldou4);
+    border-radius: 10px;
+
+    font-size: 18px;
+}
+
+.BlocJoueurPrez {
+    display: flex;
+}
+
+.BoxInfosJoueurPrez {
+    width: 405px;
+    height: 85px;
+    padding: 20px 20px 10px 10px;
+
+    overflow: auto;
+    background-color: var(--colorAldou1);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--colorAldou4);
+
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.InfosJoueurPrez {
+    height: 50px;
+    overflow: auto;
+}
+
+.JoueurGifPrez {
+    width: 115px;
+    height: 115px;
+    margin-top: -10px;
+    margin-left: -20px;
+
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.ContJoueurPrez {
+    height: fit-content;
+    padding: 5px;
+    border: 1px solid var(--colorAldou1);
+    background: var(--colorAldou4);
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.SignaNathie {
+    margin-top: 20px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.SignaNathie a {
+    color: #ddd;
+    text-decoration: none;
+}
