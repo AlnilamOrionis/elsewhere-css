@@ -1,0 +1,601 @@
+/* ===== NOTIFICATIONS ===== */
+
+/* Cacher l’ancien bandeau bleu « Options » */
+
+form:has(#checkboxes)
+> table:not(#checkboxes):has(~ #checkboxes) {
+  display: none !important;
+}
+
+/* Tableau */
+
+#checkboxes {
+  width: calc(100% - 30px) !important;
+  margin: 30px 15px;
+
+  background: transparent !important;
+  border: 0 !important;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  color: var(--colorfontAldou1);
+}
+
+#checkboxes th,
+#checkboxes td {
+  padding: 7px;
+
+  color: var(--colorfontAldou1) !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+    font-family: var(--fontAldou1) !important;
+}
+
+#checkboxes thead {
+  border-bottom: 1px solid var(--colorAldou2);
+}
+
+#checkboxes th:first-child {
+  font-family: var(--fontAldou2) !important;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#checkboxes th:not(:first-child),
+#checkboxes td:not(:first-child) {
+  width: 110px !important;
+  text-align: center;
+}
+
+/* Pastilles */
+
+#checkboxes input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 24px;
+  height: 24px;
+  margin: 0;
+
+  vertical-align: middle;
+  background: var(--colorAldou2);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition:
+    background-color 300ms ease,
+    box-shadow 300ms ease,
+    transform 300ms ease;
+}
+
+#checkboxes input[type="checkbox"]:hover {
+  background: var(--colorAldou4);
+  transform: translateX(2px);
+}
+
+#checkboxes input[type="checkbox"]:checked {
+  background: var(--colorAldou4);
+  box-shadow: inset 0 0 0 6px var(--colorAldou2);
+}
+
+/* Bouton Enregistrer */
+
+form:has(#checkboxes) input[type="submit"] {
+  padding: 7px 15px;
+
+  color: var(--colorfontAldou2) !important;
+  background: var(--colorAldou4) !important;
+  border: 0 !important;
+  border-radius: 10px;
+
+  font-family: var(--fontAldou2) !important;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition:
+    color 300ms ease,
+    background-color 300ms ease,
+    transform 300ms ease;
+}
+
+form:has(#checkboxes) input[type="submit"]:hover {
+  color: var(--colorfontAldou1) !important;
+  background: var(--colorAldou2) !important;
+  transform: translateX(5px);
+}
+
+/* ===== NOTIFICATIONS RESPONSIVES ===== */
+
+@media (max-width: 900px) {
+  #checkboxes {
+    display: block;
+
+    width: calc(100% - 85px) !important;
+    margin-right: 15px;
+    margin-left: 70px;
+
+    table-layout: auto;
+  }
+
+  #checkboxes thead,
+  #checkboxes tbody {
+    display: block;
+    width: 100%;
+  }
+
+  #checkboxes tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+  }
+
+  /* Titre de la colonne principale */
+
+  #checkboxes th:first-child {
+    grid-column: 1 / -1;
+
+    width: 100% !important;
+    padding: 8px 0;
+
+    font-family: var(--fontAldou1) !important;
+    font-size: 17px;
+    text-align: left;
+    overflow-wrap: normal;
+  }
+
+  /* Titres E-mail et Push */
+
+  #checkboxes th:not(:first-child) {
+    width: 100% !important;
+    padding: 7px 4px;
+
+    font-family: var(--fontAldou1) !important;
+    font-size: 11px;
+    text-align: center;
+    overflow-wrap: normal;
+  }
+
+  /* Une notification */
+
+  #checkboxes tbody tr {
+    padding: 8px 0;
+
+    border-bottom: 1px solid var(--colorAldou2);
+  }
+
+  /* Texte de la notification sur toute la largeur */
+
+  #checkboxes tbody td:first-child {
+    grid-column: 1 / -1;
+
+    width: 100% !important;
+    padding: 5px 0 8px;
+
+    font-family: var(--fontAldou1) !important;
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+
+  /* Pastilles alignées en dessous */
+
+  #checkboxes tbody td:not(:first-child) {
+    width: 100% !important;
+    padding: 4px;
+
+    text-align: center;
+  }
+}
+
+a[href*="search_id=favouritesearch"] {
+  display: none !important;
+}
+
+/* ===== BROUILLONS ===== */
+
+.drafts-list,
+.drafts-list * {
+  box-sizing: border-box;
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou1);
+}
+
+/* Fil d’Ariane */
+
+body:has(.drafts-list) table:has(a[href*="page_profil"]),
+body:has(.drafts-list) table:has(a[href*="page_profil"]) * {
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou1);
+}
+
+/* Tableau */
+
+.drafts-list {
+  width: 100%;
+  margin: 25px 0;
+
+  background: transparent;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  table-layout: fixed;
+}
+
+.drafts-list tr,
+.drafts-list td,
+.drafts-list th {
+  background: transparent;
+  background-image: none;
+  border: 0;
+}
+
+/* Nombre de brouillons */
+
+.drafts-list tr:first-child > td {
+  padding: 0 0 10px;
+  text-align: left;
+}
+
+.drafts-list .cattitle {
+  margin: 0;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* En-têtes */
+
+.drafts-list th {
+  width: auto;
+  height: auto;
+  padding: 12px 8px;
+
+  color: var(--colorAldou3) !important;
+  border-bottom: 1px solid var(--colorAldou2);
+
+  font-size: 17px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* Cacher la colonne numérique */
+
+.drafts-list th:first-child,
+.drafts-list tr:has(> td:nth-child(6)) > td:first-child {
+  display: none;
+}
+
+/* Colonne de sélection */
+
+.drafts-list th:last-child,
+.drafts-list tr:has(> td:nth-child(6)) > td:last-child {
+  width: 60px;
+}
+
+/* Lignes */
+
+.drafts-list tr:has(> td:nth-child(6)) > td {
+  width: auto;
+  padding: 10px;
+
+  border-bottom: 1px solid var(--colorAldou2);
+
+  font-size: 14px;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+
+.drafts-list tr:has(> td:nth-child(6)) > td * {
+  font-size: 14px;
+}
+
+/* Message ou premier sujet */
+
+.drafts-list tr:has(> td:nth-child(6)) > td:nth-child(2) {
+  padding: 12px;
+
+  background: var(--colorAldou2);
+  border-radius: 10px;
+
+  line-height: 1.2;
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.drafts-list tr:has(> td:nth-child(6)) > td:nth-child(2) * {
+  max-width: 100% !important;
+}
+
+/* Sujet, forum et date des brouillons de messages */
+
+.drafts-list
+tr:has(> td:nth-child(7))
+> td:nth-child(n + 3):nth-child(-n + 5),
+
+.drafts-list
+tr:has(> td:nth-child(7))
+> td:nth-child(n + 3):nth-child(-n + 5) * {
+  font-size: 14px !important;
+}
+
+/* Sujet des brouillons de nouveaux sujets */
+
+.drafts-list:has(th:nth-child(6):last-child)
+tr:has(> td:nth-child(6))
+> td:nth-child(2),
+
+.drafts-list:has(th:nth-child(6):last-child)
+tr:has(> td:nth-child(6))
+> td:nth-child(2) * {
+  font-size: 14px !important;
+}
+
+/* Bouton Modifier */
+
+.drafts-list
+tr:has(> td:nth-child(6))
+> td:nth-last-child(2)
+a {
+  display: inline-block;
+  padding: 7px 18px;
+
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou2);
+  border-radius: 10px;
+
+  font-family: var(--fontAldou2);
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    background-color 300ms ease,
+    color 300ms ease,
+    transform 300ms ease;
+}
+
+.drafts-list
+tr:has(> td:nth-child(6))
+> td:nth-last-child(2)
+a:hover {
+  background: var(--colorAldou4);
+  transform: translateX(5px);
+}
+
+/* Cases de sélection */
+
+.drafts-list input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 22px;
+  height: 22px;
+  margin: 0;
+
+  background: var(--colorAldou2);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition:
+    background-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.drafts-list input[type="checkbox"]:hover {
+  background: var(--colorAldou4);
+}
+
+.drafts-list input[type="checkbox"]:checked {
+  background: var(--colorAldou4);
+  box-shadow: inset 0 0 0 6px var(--colorAldou2);
+}
+
+/* Bouton de suppression */
+
+.drafts-list tr:last-child input[type="submit"] {
+  padding: 7px 18px;
+
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou4);
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+
+  font-family: var(--fontAldou2);
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  transition:
+    background-color 300ms ease,
+    color 300ms ease,
+    transform 300ms ease;
+}
+
+.drafts-list tr:last-child input[type="submit"]:hover {
+  background: var(--colorAldou2);
+  transform: translateX(5px);
+}
+
+/* ===== BROUILLONS RESPONSIVE ===== */
+
+/* Cacher la date entre 901px et 1500px */
+
+@media (min-width: 1201px) and (max-width: 1500px) {
+
+  /* Brouillons de messages */
+  
+    .drafts-list:has(th:nth-child(7)) th:nth-child(5),
+  .drafts-list:has(th:nth-child(7))
+  tr:has(> td:nth-child(7))
+  > td:nth-child(5) {
+    display: none !important;
+  }
+  
+/* Tout réduire */
+.drafts-list th,
+.drafts-list tr:has(> td:nth-child(6)) > td,
+.drafts-list tr:has(> td:nth-child(6)) > td * {
+  font-size: 10px !important;
+}
+
+/* Forcer aussi les sujets des brouillons de messages */
+.drafts-list:has(th:nth-child(7))
+tr:has(> td:nth-child(7))
+> td:nth-child(3),
+.drafts-list:has(th:nth-child(7))
+tr:has(> td:nth-child(7))
+> td:nth-child(3) * {
+  font-size: 10px !important;
+}
+
+  /* Brouillons de sujets */
+
+  .drafts-list:has(th:nth-child(6):last-child) th:nth-child(4),
+  .drafts-list:has(th:nth-child(6):last-child)
+  tr:has(> td:nth-child(6))
+  > td:nth-child(4) {
+    display: none !important;
+  }
+  /* Réserver deux colonnes distinctes */
+
+.drafts-list th:nth-last-child(2),
+.drafts-list tr:has(> td:nth-child(6)) > td:nth-last-child(2) {
+  width: 160px !important;
+  min-width: 160px;
+  text-align: center;
+}
+
+.drafts-list th:last-child,
+.drafts-list tr:has(> td:nth-child(6)) > td:last-child {
+  width: 60px !important;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Empêcher le bouton de déborder */
+
+.drafts-list
+tr:has(> td:nth-child(6))
+> td:nth-last-child(2)
+a {
+  max-width: 100%;
+  white-space: nowrap;
+}
+  .drafts-list
+tr:has(> td:nth-child(6))
+> td:nth-last-child(2)
+a {
+  max-width: 100%;
+  padding: 6px 10px;
+  line-height: 1;
+  white-space: nowrap;
+}
+}
+
+@media (max-width: 1200px) {
+  
+  .drafts-list > tbody {
+  display: block;
+  width: 100%;
+}
+
+.drafts-list > tbody > tr:first-child,
+.drafts-list > tbody > tr:first-child > td {
+  display: block;
+  width: 100%;
+}
+
+  /* Cacher les en-têtes */
+
+  .drafts-list tr:has(> th) {
+    display: none;
+  }
+
+  /* Empiler uniquement le contenu de chaque brouillon */
+
+  .drafts-list tr:has(> td:nth-child(6)) {
+    display: flex;
+    flex-direction: column;
+
+    width: 100% !important;
+min-width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid var(--colorAldou2);
+  }
+
+  .drafts-list tr:has(> td:nth-child(6)) > td {
+    display: block;
+
+    width: 100% !important;
+    padding: 8px 12px;
+
+    border: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* Cacher le numéro et la checkbox */
+
+  .drafts-list tr:has(> td:nth-child(6)) > td:first-child,
+  .drafts-list tr:has(> td:nth-child(6)) > td:last-child {
+    display: none;
+  }
+
+  /* Cacher la date des brouillons de messages */
+
+  .drafts-list
+  tr:has(> td:nth-child(7))
+  > td:nth-child(5) {
+    display: none;
+  }
+
+  /* Cacher la date des brouillons de sujets */
+
+  .drafts-list:has(th:nth-child(6):last-child)
+  tr:has(> td:nth-child(6))
+  > td:nth-child(4) {
+    display: none;
+  }
+
+  /* Message ou sujet principal */
+
+  .drafts-list tr:has(> td:nth-child(6)) > td:nth-child(2) {
+    margin-bottom: 8px;
+    padding: 15px;
+  }
+
+  /* Aperçu court du message */
+
+  .drafts-list
+  tr:has(> td:nth-child(7))
+  > td:nth-child(2) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Bouton Modifier */
+
+  .drafts-list
+  tr:has(> td:nth-child(6))
+  > td:nth-last-child(2) {
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  /* Cacher la suppression */
+
+  .drafts-list tr:has(input[type="submit"]) {
+    display: none;
+  }
+}
