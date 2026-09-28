@@ -1,0 +1,178 @@
+/* ===== MESSAGES PRIVES ===== */
+
+  .pm-actions a img {
+  display: none;
+}
+
+.pm-actions a::after {
+  content: "Répondre au message";
+}
+
+.pm-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0 !important;
+}
+
+/* Cache toutes les lignes sauf celle qui contient Supprimer */
+.pm-controls-table tr:not(:has(input[name="delete"])) {
+  display: none !important;
+}
+
+/* ===== SÉLECTION DES SUJETS SURVEILLÉS ===== */
+
+/*
+ * Retirer la sélection du placement automatique de la grille.
+ * La carte conserve ainsi exactement ses trois colonnes habituelles.
+ */
+
+.search-topic-card:has(.topic-selection) {
+  padding-right: 50px;
+}
+
+/* Réserver la place de la pastille dans la dernière colonne */
+
+.search-topic-card:has(.topic-selection) .topic-card-last {
+  box-sizing: border-box;
+}
+
+/* Bouton de sélection placé à droite */
+
+.search-topic-card .topic-selection {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 50px;
+  height: 100%;
+
+  background: var(--colorAldou0);
+  cursor: pointer;
+  pointer-events: auto !important;
+}
+
+/* Pastille identique aux sélections des MP */
+
+.search-topic-card .topic-selection input[type="checkbox"] {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative;
+  z-index: 6;
+
+  appearance: none !important;
+  -webkit-appearance: none !important;
+
+  box-sizing: border-box;
+  width: 24px !important;
+  min-width: 24px;
+  height: 24px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: var(--colorAldou2);
+  border: 0 !important;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition:
+    background-color 300ms ease,
+    box-shadow 300ms ease,
+    transform 300ms ease;
+}
+
+.search-topic-card
+.topic-selection
+input[type="checkbox"]:hover {
+  background: var(--colorAldou4);
+  transform: translateX(2px);
+}
+
+.search-topic-card
+.topic-selection
+input[type="checkbox"]:checked {
+  background: var(--colorAldou4);
+  box-shadow: inset 0 0 0 6px var(--colorAldou2);
+}
+
+/* Bouton « Arrêter de surveiller » */
+
+.search-watch-actions {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  justify-content: flex-end;
+
+  margin: 20px 0;
+}
+
+.search-watch-actions-top {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.search-watch-actions input[type="submit"] {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+
+  padding: 7px 15px;
+
+  color: var(--colorfontAldou1) !important;
+  background: var(--colorAldou2) !important;
+  border: 0 !important;
+  border-radius: 10px;
+  cursor: pointer;
+
+  font-family: var(--fontAldou2) !important;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  transition:
+    color 300ms ease,
+    background-color 300ms ease,
+    transform 300ms ease;
+}
+
+.search-watch-actions input[type="submit"]:hover {
+  color: var(--colorfontAldou2) !important;
+  background: var(--colorAldou4) !important;
+  transform: translateX(5px);
+}
+
+.search-profile-tabs,
+.search-profile-tabs *,
+body:has(#checkboxes) table:has(a[href*="page_profil"]),
+body:has(#checkboxes) table:has(a[href*="page_profil"]) *{
+  font-family: var(--fontAldou1);
+  color: var(--colorfontAldou1) !important;
+}
+
+/* ===== RÉSULTATS DE RECHERCHE PAR SUJETS ET MESSAGE ===== */
+
+.search-results-nav {
+  margin: 0;
+  padding: 6px 10px 0;
+  color: var(--colorfontAldou1);
+  font: 11px/1.2 var(--fontAldou1);
+}
+
+.search-results-nav a {
+  color: var(--colorfontAldou1);
+  font-weight: bold;
+}
+.search-result-topic,
+.search-result-message {
+  font-family: var(--fontAldou1);
+}
