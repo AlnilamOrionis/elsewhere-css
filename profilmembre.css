@@ -1,0 +1,161 @@
+  /*PROFIL INTERNE ===== */
+
+.raw-profil {
+  box-sizing: border-box;
+  font-family: var(--fontAldou1);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin-top: 15px;
+}
+
+.raw-profil .raw-pseudo {
+  flex: 0 0 100%;
+}
+
+.raw-profil .raw-avatar img {
+  display: block;
+  width: 180px;
+  height: 320px;
+  object-fit: cover;
+  border: 0;
+  border-radius: 20px;
+}
+
+.raw-profil .raw-avatar > span:first-child {
+  display: block;
+  width: 180px;
+  height: 320px;
+  border-radius: 20px;
+  margin: 20px auto 5px;
+  overflow: hidden;
+}
+
+.raw-profil .raw-online {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+   color: var(--colorfontAldou1);
+}
+
+.raw-champs > .raw-champ:nth-child(1),
+.raw-champs > .raw-champ:nth-child(5),
+.raw-champs > .raw-champ:nth-child(12){
+  position: relative;
+  margin-top: 45px;
+  padding-top: 15px;
+  border-top: 1px solid var(--colorAldou2);
+}
+
+.raw-champs > .raw-champ:nth-child(1)::before,
+.raw-champs > .raw-champ:nth-child(5)::before,
+.raw-champs > .raw-champ:nth-child(12)::before {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou2);
+  font-size: 20px;
+}
+.raw-champs > .raw-champ:nth-child(1)::before {
+  content: "INFORMATIONS DU JOUEUR";
+}
+
+.raw-champs > .raw-champ:nth-child(5)::before {
+  content: "INFORMATIONS DU PERSONNAGE";
+}
+
+.raw-champs > .raw-champ:nth-child(12)::before {
+  content: "INFORMATIONS DU STAFF";
+}
+
+.raw-profil .raw-other {
+  flex: 1;
+  min-width: 0;
+}
+
+.raw-content {
+  padding: 10px;
+  margin: 10px;
+}
+
+.raw-partic {
+  display: flex;
+  justify-content: space-around;
+  padding: 3px;
+  background: var(--colorAldou2);
+  font-size: 11px;
+  color: var(--colorfontAldou1);
+}
+
+.raw-partic .raw-lastvisi {
+  font-weight: bold;
+}
+
+.raw-partic a {
+  text-decoration: underline;
+}
+
+.raw-champs {
+  padding: 10px;
+}
+
+.raw-champ {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  align-items: start;
+  gap: 5px;
+  color: var(--colorfontAldou1);
+font-size: 13px;
+}
+
+.raw-champo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.raw-champo span {
+  margin: 0;
+}
+
+
+.raw-champo img {
+  width: auto;
+  max-width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.raw-btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0 50px 10px;
+}
+
+.raw-btns a {
+  width: 49%;
+  text-align: center;
+  font-family: var(--fontAldou2);
+  padding: 3px;
+  background: var(--colorAldou2);
+  color: var(--colorfontAldou1);
+  border-radius: 10px;
+  font-weight: 900;
+  font-size: 16px;
+  transition: 500ms;
+  text-transform: uppercase;
+}
+
+.raw-btns a:hover {
+  letter-spacing: 2px;
+   color: var(--colorfontAldou2);
+  background: var(--colorAldou4);
+  text-decoration: none !important;
+}
+
+.raw-champ > :first-child,
+.raw-champ > :first-child * {
+  color: var(--colorfontAldou1) !important;
+}
