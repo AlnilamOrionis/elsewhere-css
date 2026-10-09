@@ -1,0 +1,514 @@
+/*CONNEXION RAPIDE ===== */
+
+.connexion-rapide {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0 30px;
+  padding: 20px;
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou2);
+  border-radius: 20px;
+  font-family: var(--fontAldou1);
+}
+
+.connexion-champ {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.connexion-champ label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.connexion-champ input {
+  width: 190px;
+  height: 36px;
+  padding: 0 10px;
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou0);
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-family: var(--fontAldou1);
+}
+
+.connexion-bouton {
+  height: 36px;
+  padding: 0 18px;
+  color: var(--colorfontAldou1)!important;
+  background: var(--colorAldou0) !important;
+  border: 0;
+  border-radius: 10px;
+  font-family: var(--fontAldou2) !important;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.connexion-bouton:hover {
+  background: var(--colorAldou4) !important;
+  color: var(--colorfontAldou2) !important;
+  transform: translateX(2px);
+}
+
+
+/*RACCOURCIS DU FORUM ===== */
+
+.forum-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 12px;
+  height: auto;
+  padding: 10px;
+}
+
+ul.linklist.top a,
+.forum-links a {
+  flex: 0 0 auto;
+  padding: 0 10px;
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou2);
+  font-family: var(--fontAldou3) !important;
+  font-size: 8px !important;
+  font-weight: bold;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  white-space: nowrap;
+  border-radius: 6px;
+  display: inline-block;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin: 1px;
+  transition: background 0.3s ease,
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+ul.linklist.top a:hover,
+.forum-links a:hover {
+  color: var(--colorfontAldou2);
+  background: var(--colorAldou4);
+  transform: translateX(2px);
+}
+
+.forum-linkssmall {
+  height: auto;
+  margin-top: 15px;
+}
+
+/* ===== SUJETS ===== */
+
+/* BOUTONS DU HAUT ET DU BAS */
+
+.sub-header-buttons,
+.topic-actions.bottom {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 30px 0 30px auto;
+}
+
+.sub-header-buttons a,
+.forumviews a,
+.topic-actions.bottom a {
+  display: inline-block;
+  padding: 6px 12px;
+  color: var(--colorfontAldou1) !important;
+  background: var(--colorAldou2);
+  border-radius: 10px;
+  font-family: var(--fontAldou1);
+  text-decoration: none !important;
+  white-space: nowrap;
+  transition:
+    color 300ms ease,
+    background-color 300ms ease,
+    transform 300ms ease;
+}
+
+.topic-actions.bottom a + a {
+  margin-left: 10px;
+}
+
+
+.sub-header-buttons a:hover,
+.forumviews a:hover,
+.topic-actions.bottom a:hover {
+  color: var(--colorfontAldou2) !important;
+  background: var(--colorAldou4);
+  transform: translateX(5px);
+}
+
+
+/* STRUCTURE DU MESSAGE */
+
+.postotal {
+  display: grid;
+  grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+  grid-template-rows: 120px auto;
+  grid-template-areas:
+    "profile infos"
+    "profile body";
+  column-gap: 30px;
+  align-items: start;
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-bottom: 50px;
+  padding-left: 20px;
+
+  background: none;
+  border: 0;
+  box-shadow: none;
+  font-family: var(--fontAldou1);
+}
+
+.postotal .postprofile {
+  grid-area: profile;
+  min-width: 0;
+}
+
+.postotal .infosprofil {
+  grid-area: infos;
+  min-width: 0;
+}
+
+.postotal .postbody {
+  grid-area: body;
+  width: auto;
+  min-width: 0;
+  margin: 0;
+}
+
+/* AVATAR */
+
+.profiltotal {
+  position: relative;
+  z-index: 85;
+  width: 100%;
+  max-width: 240px;
+}
+
+.profiltotal .postprofile-avatar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.profiltotal .postprofile-avatar img {
+  display: block;
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: 240px !important;
+  height: auto !important;
+  aspect-ratio: 240 / 400;
+  margin: 0 0 8px;
+
+  object-fit: cover;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+.profiltotal .iconsmess {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* PROFIL AU SURVOL */
+
+.profiltotal .labelprofile {
+  position: absolute;
+  z-index: 90;
+  inset: 0 auto auto 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  box-sizing: border-box;
+  width: 100%;
+  aspect-ratio: 240 / 400;
+  padding: 15px;
+  overflow: hidden;
+
+  color: var(--colorfontAldou2);
+  background: color-mix(
+    in srgb,
+    var(--colorAldou0) 40%,
+    transparent
+  );
+  border-radius: 20px;
+  font-size: 11px;
+  text-align: left;
+
+  transform: scale(0);
+  transition: transform 500ms ease;
+}
+
+.profiltotal:hover .labelprofile {
+  transform: scale(1);
+}
+
+.profiltotal .profile-field-card {
+  flex: 1 1 0;
+  min-height: 0;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  overflow-y: auto;
+
+  color: var(--colorfontAldou1);
+  background: color-mix(
+    in srgb,
+    var(--colorAldou0) 50%,
+    transparent
+  );
+  border-radius: 12px;
+  line-height: 1.2;
+}
+
+.profiltotal .profile-field-card:first-of-type {
+  background: color-mix(
+    in srgb,
+    var(--colorAldou2) 50%,
+    transparent
+  );
+}
+
+
+.profiltotal .profile-field-card .label {
+  display: block;
+  margin: 0 0 2px;
+  padding: 0;
+
+  color: var(--colorfontAldou1);
+  background: none;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.profiltotal .profile-field-content {
+  color: var(--colorfontAldou1);
+  font-size: 10px;
+  font-weight: normal;
+}
+
+/* PSEUDO, SYMBOLE ET DATE */
+
+.postotal .postprofile-name > :not(.group-symbol) {
+  display: inline-block;
+  transform: translateY(-12px);
+}
+
+.postotal .infosprofil {
+  position: relative;
+  z-index: 80;
+  height: 120px;
+}
+
+.postotal .infosprofil::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: -10px;
+  left: -30px;
+  height: 30px;
+
+  background: var(--colorAldou1);
+  transform: translateY(-50%);
+}
+
+[data-color-scheme="dark"] .postotal .infosprofil::before {
+    background: var(--colorAldou2);
+}
+
+.postotal .infosprofil-flex {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 120px;
+  min-width: 0;
+  margin: 0;
+}
+
+.postotal .postprofile-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  font-family: var(--fontAldou2);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.postotal .postprofile-name a,
+.postotal .postprofile-name span,
+.postotal .postprofile-name strong {
+  color: inherit;
+  font: inherit;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+}
+
+.postotal .postprofile-name a,
+.postotal .postprofile-name a * {
+  pointer-events: none;
+  cursor: default;
+}
+
+.postotal .group-symbol {
+  display: flex;
+  flex: 0 0 120px;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+}
+
+.postotal .group-symbol img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border: 0;
+}
+
+.postotal .postprofile-name:not(:has(.group-symbol img)) {
+  margin-left: 15px;
+}
+
+.postotal .topic-date {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 15px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--fontAldou1);
+  font-size: 11px;
+  line-height: 1;
+  opacity: 0.5;
+  transform: translateY(-50%);
+}
+
+[data-color-scheme="dark"] .postotal .topic-date {
+  color: var(--colorfontAldou1);
+}
+
+/* ICÔNES DU MESSAGE */
+
+.postotal .post-head {
+  position: relative;
+  z-index: 90;
+  display: flex;
+margin: -30px 0 10px;
+  padding: 0 0 10px;
+  border: 0;
+}
+
+.postotal .buttonscontent {
+  width: 100%;
+  min-width: 0;
+}
+
+.postotal .profile-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  margin: 0 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.postotal .profile-icons li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+.postotal .profile-icons a,
+.postotal .profile-icons span {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  line-height: 0;
+}
+
+.postotal .profile-icons img {
+  display: block;
+  border: 0;
+}
+
+
+/* CONTENU DU MESSAGE */
+
+.postotal .postbody .content {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 270px;
+margin: 0 10px 0 -10px;
+  padding: 20px;
+  overflow-wrap: anywhere;
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou1);
+  border-radius: 20px;
+}
+
+[data-color-scheme="dark"] .postotal .postbody .content {
+    color: var(--colorfontAldou2);
+}
+
+.postotal .edited-message {
+  margin: 4px 10px 0 0;
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou1);
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: right;
+}
+[data-color-scheme="dark"] .postotal .edited-message {
+    color: var(--colorfontAldou2);
+}
+
+.postotal .postbody .content {
+  overflow: hidden;
+  contain: layout paint;
+}
+
+.postotal .postbody .content * {
+  box-sizing: border-box;
+  max-width: 100% !important;
+}
