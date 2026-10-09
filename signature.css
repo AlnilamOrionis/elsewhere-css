@@ -1,0 +1,116 @@
+/*--------- SIGNA ---------*/
+
+.carte-quete-png {
+  width:450px;
+  max-width:100%;
+  margin:auto;
+  line-height:0;
+  --cq-filter:none;
+}
+
+/* Morceaux graphiques colorés */
+
+.carte-quete-png .cq-piece {
+  display:block;
+  width:100%;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:100% 100%;
+  filter:var(--cq-filter);
+}
+
+/* Partie haute commune */
+
+.carte-quete-png .cq-haut {
+  aspect-ratio:1486 / 488;
+}
+
+/* Partie haute */
+
+.carte-quete-png.rosA .cq-haut {
+  background-image:url("https://i.servimg.com/u/f47/16/54/19/33/carte_19.png");
+}
+
+.carte-quete-png.oceA .cq-haut {
+  background-image:url("https://i.servimg.com/u/f47/16/54/19/33/carte_22.png");
+}
+
+.carte-quete-png.melA .cq-haut {
+  background-image:url("https://i.servimg.com/u/f47/16/54/19/33/carte_24.png");
+}
+
+.carte-quete-png.beA .cq-haut {
+  background-image:url("https://i.servimg.com/u/f47/16/54/19/33/carte_23.png");
+}
+
+/* Rangée des neuf ronds */
+
+.carte-quete-png .cq-ronds {
+  aspect-ratio:1486 / 157;
+  background-image:url("https://i.servimg.com/u/f47/16/54/19/33/carte_17.png");
+}
+
+/* Bas de la carte */
+
+.carte-quete-png .cq-bas {
+  aspect-ratio:1486 / 77;
+  background-image:url("https://i.servimg.com/u/f47/16/54/19/33/carte_15.png");
+}
+
+/* Zone du haut */
+
+.carte-quete-png .cq-haut-zone {
+  position:relative;
+}
+
+/* Sprite du personnage */
+
+.carte-quete-png .cq-sprite {
+  position:absolute;
+  z-index:2;
+  top:-25px;
+  right:-20px;
+  width:39%;
+  aspect-ratio:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.carte-quete-png .cq-sprite img {
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+}
+
+/* Zone des neuf ronds */
+
+.carte-quete-png .cq-ronds-zone {
+  position:relative;
+}
+
+.carte-quete-png .cq-ronds-images {
+  position:absolute;
+  inset:0;
+  display:grid;
+  grid-template-columns:repeat(9, minmax(0, 1fr));
+  column-gap:2.5%;
+  padding:0.945% 3.5% 1.43%;
+  box-sizing:border-box;
+}
+
+/* Images placées dans les ronds */
+
+.carte-quete-png .cq-ronds-images img {
+  display:block;
+  width:100%;
+  height:100%;
+  min-width:0;
+  aspect-ratio:1;
+  border-radius:50%;
+  object-fit:cover;
+}
