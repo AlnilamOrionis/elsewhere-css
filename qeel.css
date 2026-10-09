@@ -1,0 +1,319 @@
+/* QUI EST EN LIGNE ===== */
+
+.qeeltotal {
+  container-type: inline-size;
+  margin: 30px -10px 50px;
+  padding: 30px 0 30px;
+  background: var(--colorAldou2);
+  font-family: var(--fontAldou1);
+  position: relative;
+}
+
+.qeeltotal::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -18px;
+  right: -270px;
+
+  width: 375px;
+  height: 600px;
+
+  background: url("https://i.servimg.com/u/f53/17/19/85/81/angel11.png") center / contain no-repeat;
+  pointer-events: none;
+}
+
+[data-color-scheme="dark"] .qeeltotal::after {
+     background: url("https://i.servimg.com/u/f53/17/19/85/81/angeld12.png")
+    center / contain no-repeat;
+}
+
+.qeelcontenu .qeelgauche,
+.qeelcontenu .qeeldroite {
+  min-width: 0;
+}
+
+.qeelhaut {
+  position: relative;
+  display: flex;
+  height: 110px;
+  padding: 0 25px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.qeelhaut::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0 0 0 80px;
+  background: var(--colorAldou0);
+}
+
+.qeelnew,
+.qeelmessmem {
+  position: relative;
+  z-index: 1;
+}
+
+.qeeltotal .qeeltitles {
+  margin: 0 0 -2px 15px;
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou2);
+  font-size: clamp(20px, 2.43cqw, 28px);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.qeelnew {
+  display: flex;
+  width: 45%;
+  align-items: center;
+}
+
+.qeelnew .vavaqeel {
+  flex: 0 0 110px;
+  width: 110px;
+  height: 110px;
+}
+
+.qeelnew .vavaqeel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.qeelnew .dern-in2 {
+  width: auto;
+  margin-left: 25px;
+}
+
+.qeelnew .dern-in2 span:first-child {
+  display: block;
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou2);
+font-size: clamp(20px, 2.6cqw, 30px);
+  line-height: 1;
+}
+
+.qeelnew .dern-in2 span:last-child strong a {
+  display: block;
+  margin-top: 5px;
+  color: var(--colorAldou4);
+  font-size: 20px;
+  text-align: left;
+}
+
+.qeelmessmem {
+  display: flex;
+  width: 48%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.qeelmessmem span {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  height: 70px;
+gap: clamp(6px, 1.05cqw, 12px);
+padding: 10px clamp(8px, 1.2cqw, 14px);
+font-size: clamp(14px, 1.9cqw, 22px);
+  box-sizing: border-box;
+
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou2);
+  border-radius: 20px;
+  font-family: var(--fontAldou2);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.qeelmessmem span strong {
+  display: flex;
+  flex: 0 0 clamp(52px, 6.95cqw, 80px);
+  height: clamp(34px, 3.48cqw, 40px);
+  align-items: center;
+  justify-content: center;
+
+  color: var(--colorAldou2);
+  background: var(--colorAldou0);
+  border-radius: 18px;
+  font-family: var(--fontAldou1);
+  font-size: clamp(20px, 2.43cqw, 28px);
+  font-weight: 600;
+}
+
+[data-color-scheme="dark"] .qeelmessmem span strong {
+  color: var(--colorAldou2);
+  background: var(--colorAldou1);
+  font-family: var(--fontAldou1);
+}
+
+
+.qeelcontenu {
+  display: flex;
+  padding: 30px 45px 0;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.qeelcontenu .qeelgauche {
+  width: 55%;
+}
+
+.qeelcontenu .qeeldroite {
+  width: 40%;
+}
+
+
+.qeelgroupes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.qeelgroupes span {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  padding: 6px;
+  background: var(--colorAldou0);  
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+[data-color-scheme="dark"] .qeelgroupes span {
+  background: var(--colorAldou1);
+}
+
+.qeelgroupes span:hover {
+  transform: translateY(-2px);
+}
+
+.qeelgroupes img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.qeeldgroupes .qeel-fiche {
+  position: relative;
+
+  width: 100%;
+  max-width: 420px;
+  min-height: 285px;
+  margin: 0 auto;
+  padding: 25px 120px 25px 25px;
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou0);
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+[data-color-scheme="dark"] .qeeldgroupes .qeel-fiche {
+  color: var(--colorfontAldou2);
+  background: var(--colorAldou1);
+}
+
+.qeeldgroupes .qeel-fiche.dpgroup {
+  display: block;
+}
+
+.qeel-fiche > strong {
+  display: block;
+  margin-bottom: 14px;
+  font-family: var(--fontAldou1);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.qeel-fiche.groupe1 > strong {
+  color: var(--groupe1);
+}
+
+.qeel-fiche.groupe2 > strong {
+  color: var(--groupe2);
+}
+
+.qeel-fiche.groupe3 > strong {
+  color: var(--groupe3);
+}
+
+.qeel-fiche.groupe4 > strong {
+  color: var(--groupe4);
+}
+
+.qeel-fiche.groupe5 > strong {
+  color: var(--groupe5);
+}
+
+.qeel-fiche p {
+  margin: 0;
+font-family: var(--fontAldou1);
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.qeel-fiche .qeel-cle {
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  width: 140px;
+  max-height: 240px;
+  object-fit: contain;
+  transform: translateY(-50%);
+}
+
+.qeelcredit {
+  width: 100%;
+  padding: 0 20px 10px;
+  color: var(--colorfontAldou1);
+  box-sizing: border-box;
+  font-size: 9px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.qeelcredit a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.qeelcoco {
+height: 120px;
+padding: 15px;
+background: var(--colorAldou0);
+border-radius: 20px;
+overflow: auto;
+box-sizing: border-box;
+}
+
+.qeelcoco strong,
+.dayQEEL strong {
+font-weight: 500;
+}
+
+ .qeel-codern {
+margin-top: 30px;
+}
+
+.dayQEEL {
+height: 160px;
+padding: 15px;
+background: var(--colorAldou0);
+border-radius: 20px;
+overflow: auto;
+box-sizing: border-box;
+}
