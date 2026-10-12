@@ -1,0 +1,234 @@
+
+/* ================= CHATBOX SIMPLE ================= */
+
+body.chatbox #chatbox_footer,
+body.chatbox #chatbox_footer .catBottom {
+  height: 35px;
+  border-radius: 0 0 20px 20px;
+}
+
+body.chatbox #chatbox_footer {
+  overflow: hidden;
+}
+
+/* Titre en haut */
+body.chatbox #chatbox_header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 35px;
+}
+
+/* Membres entre les deux barres */
+body.chatbox #chatbox_members {
+  position: absolute;
+  top: 35px;
+  bottom: 35px;
+  left: 0;
+  width: 180px;
+  overflow-y: auto;
+}
+
+/* Messages entre les deux barres */
+body.chatbox #chatbox {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  bottom: 25px;
+  left: 181px;
+  overflow-y: auto;
+}
+
+/* Cadre de la ChatBox sur la page d’accueil */
+iframe#frame_chatbox {
+  display: block;
+  width: 100%;
+  border: 0 !important;
+  border-radius: 20px;
+}
+
+/*
+ * Toutes les règles suivantes sont limitées
+ * à l’intérieur de la ChatBox.
+ */
+
+body.chatbox {
+  margin: 0;
+  background: var(--colorAldou0);
+  font-family: var(--fontAldou1), sans-serif;
+  position: relative;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Zone des messages */
+body.chatbox #chatbox {
+  background: var(--colorAldou0);
+  border-right: 2px solid var(--colorAldou3);
+  box-sizing: border-box;
+}
+
+[data-color-scheme="dark"] body.chatbox #chatbox {
+  background: var(--colorAldou1);
+  color : var(--colorfontAldou2);
+}
+
+/* Supprimer l’alternance des messages */
+body.chatbox #chatbox .chatbox_row_1,
+body.chatbox #chatbox .chatbox_row_2 {
+  background: transparent !important;
+}
+
+/* Barre supérieure */
+body.chatbox #chatbox_header .catBottom {
+  border: 0;
+  background: var(--colorAldou3) !important;
+  background-image: none !important;
+}
+
+/* Barre inférieure */
+body.chatbox #chatbox_footer .catBottom {
+  border: 0;
+  background: var(--colorAldou4) !important;
+  padding : 0 8px 0 8px; 
+}
+
+/* Liens de la barre supérieure */
+body.chatbox #chatbox_header a,
+body.chatbox #chatbox_header .cattitle,
+body.chatbox #chatbox_header .chatbox-options {
+  color: white !important;
+  font-family: var(--fontAldou1), sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  padding : 0 10px 0 30px
+}
+
+/* Colonne des membres */
+body.chatbox #chatbox_members {
+  background: var(--colorAldou1);
+  border-right: 1px solid var(--colorAldou4);
+  font-size: 14px;
+}
+
+/* Titres En ligne / Absents */
+body.chatbox #chatbox_members .online,
+body.chatbox #chatbox_members .away {
+  color: white;
+  font-family: var(--fontAldou1), sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+body.chatbox #chatbox_members .online {
+  background: var(--colorAldou4);
+}
+
+body.chatbox #chatbox_members .away {
+  background: var(--colorAldou2);
+}
+
+/* Noms des membres dans les messages */
+body.chatbox .chatbox-message-username {
+  font-family: var(--fontAldou1), sans-serif;
+  font-size: 12px;
+}
+
+/* Cadre Forumactif qui contient précisément la ChatBox */
+table.forumline:has(#frame_chatbox) {
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Cellule placée derrière la ChatBox */
+table.forumline:has(#frame_chatbox) > tbody > tr > td.row1 {
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+/* Iframe de la ChatBox */
+#frame_chatbox {
+  display: block;
+  width: 100%;
+  border: 0 !important;
+  border-radius: 20px;
+}
+
+/* Conteneur de l’avatar */
+body.chatbox #chatbox .cb-avatar,
+body.chatbox #chatbox .chatbox-message-avatar {
+  display: inline-block;
+  width: 36px !important;
+  height: 36px !important;
+  padding: 0 !important;
+
+  overflow: hidden;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  box-shadow: none !important;
+}
+
+/* Image de l’avatar */
+body.chatbox #chatbox .cb-avatar img,
+body.chatbox #chatbox .chatbox-message-avatar img {
+  display: block;
+  width: 36px !important;
+  height: 36px !important;
+
+  object-fit: cover !important;
+  object-position: center;
+  border: 0 !important;
+  border-radius: 50% !important;
+  box-shadow: none !important;
+}
+
+/* Barre inférieure uniquement lorsque la ChatBox est déconnectée */
+body.chatbox #chatbox_option_co::after {
+  content: "";
+
+  position: fixed;
+  z-index: 9;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 35px;
+
+  background: var(--colorAldou4);
+  border-radius: 0 0 20px 20px;
+
+  pointer-events: none;
+}
+
+/* Texte normal des messages */
+body.chatbox #chatbox .msg {
+  color: var(--colorfontAldou1) !important;
+}
+
+[data-color-scheme="dark"] body.chatbox #chatbox .msg {
+  color: var(--colorfontAldou2) !important;
+}
+
+/* Remplace uniquement le noir imposé par Forumactif */
+body.chatbox #chatbox .msg span[style*="color:#000"],
+body.chatbox #chatbox .msg span[style*="color: #000"],
+body.chatbox #chatbox .msg span[style*="color:black"],
+body.chatbox #chatbox .msg span[style*="color: black"],
+body.chatbox #chatbox .msg span[style*="rgb(0, 0, 0)"] {
+  color: var(--colorfontAldou1) !important;
+}
+
+[data-color-scheme="dark"] body.chatbox #chatbox .msg span[style*="color:#000"],
+[data-color-scheme="dark"] body.chatbox #chatbox .msg span[style*="color: #000"],
+[data-color-scheme="dark"] body.chatbox #chatbox .msg span[style*="color:black"],
+[data-color-scheme="dark"] body.chatbox #chatbox .msg span[style*="color: black"],
+[data-color-scheme="dark"] body.chatbox #chatbox .msg span[style*="rgb(0, 0, 0)"] {
+  color: var(--colorfontAldou2) !important;
+}
