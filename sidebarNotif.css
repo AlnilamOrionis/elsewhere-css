@@ -1,0 +1,448 @@
+/*-----------NOTIFI-----------------*/
+
+/* Boutons latéraux */
+[data-theme-controls] {
+  position: fixed;
+  z-index: 999;
+  top: 55px;
+  left: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Bouton des notifications */
+#notiffi_button {
+  position: relative;
+  z-index: 999;
+
+  display: grid;
+  place-items: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou2);
+  border: 0;
+  border-radius: 50%;
+
+  font-size: 16px;
+  cursor: pointer;
+  transition: 300ms ease;
+}
+
+#notiffi_button:hover,
+#notiffi_button.active {
+  color: var(--colorfontAldou2);
+  background: var(--colorAldou4);
+  transform: rotate(10deg);
+}
+
+/* Nombre de notifications */
+#notiffi_button .unread_count {
+  position: absolute;
+  top: -4px;
+  right: -5px;
+
+  display: grid;
+  place-items: center;
+
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+
+  color: white;
+  background: var(--colorAldou4);
+  border-radius: 10px;
+
+  font-size: 10px;
+  line-height: 1;
+}
+
+#notiffi_button .unread_count:empty {
+  display: none;
+}
+
+/* Panneau fermé */
+#notiffi_panel {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  width: min(380px, calc(100vw - 15px));
+  padding: 110px 18px 18px;
+
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou0);
+  border-right: 2px solid var(--colorAldou4);
+  box-shadow: 5px 0 20px rgb(0 0 0 / 15%);
+
+  visibility: hidden;
+  transform: translateX(-105%);
+  transition:
+    transform 300ms ease,
+    visibility 300ms ease;
+}
+
+/* Panneau ouvert */
+#notiffi_panel.open {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Liste */
+.all_notifications {
+  display: block;
+  flex: 1;
+  min-height: 0;
+  padding: 8px;
+
+  overflow-y: auto;
+  background: var(--colorAldou1);
+  border-radius: 15px;
+}
+
+.no_notification {
+  display: block;
+  padding: 30px 10px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Une notification */
+.notification {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  margin-bottom: 6px;
+  padding: 10px;
+
+background: var(--colorAldou0);
+  border-radius: 10px;
+}
+
+.notification.unread {
+  background: var(--colorAldou2);
+}
+
+.notif_avatar {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.notif_avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.notif_content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notif_time {
+  margin-top: 5px;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.notif_close,
+.alert_close {
+  padding: 3px;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Bas du panneau */
+.notiffi_manage {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.notiffi_actions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.notiffi_actions button {
+  padding: 5px 8px;
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou2);
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Petite alerte lors d’une nouvelle notification */
+.notification.alert {
+  position: fixed;
+  z-index: 999;
+  right: 15px;
+  bottom: 15px;
+
+  width: min(350px, calc(100vw - 30px));
+  box-sizing: border-box;
+
+  background: var(--colorAldou1);
+  box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+
+  opacity: 0;
+  transform: translateY(120%);
+  transition: 300ms ease;
+}
+
+.notification.alert.up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Lien « Voir toutes les notifications » */
+#notiffi_panel .notiffi_manage > a {
+  font-size: 11px;
+}
+
+/* Boutons d’action */
+#notiffi_panel .notiffi_actions button {
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+#notiffi_panel .notiffi_actions button:hover {
+  color: var(--colorfontAldou2);
+  background: var(--colorAldou4);
+  transform: translateX(2px);
+}
+
+/*-----------NOTIF DANS LE PROFIL-----------------*/
+.cp_notifs,
+.cp_notifs * {
+  box-sizing: border-box;
+}
+
+.cp_notifs .forumline {
+  width: 100%;
+  margin-top: 25px;
+  border: 0;
+  border-collapse: collapse;
+  table-layout: auto;
+  background: transparent;
+}
+
+.cp_notifs .forumline th,
+.cp_notifs .forumline td {
+  height: auto;
+  border: 0;
+  background: transparent;
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou1);
+  font-size: 13px;
+}
+
+.cp_notifs .forumline .catHead {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--colorAldou2);
+  text-align: left;
+}
+
+body:has(#checkboxes) .cp_notifs .catHead .cattitle {
+  margin: 0;
+  font-family: var(--fontAldou2);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.cp_notifs .forumline th {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--colorAldou2);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.cp_notifs .forumline th:nth-child(1) {
+  width: 66%;
+}
+
+.cp_notifs .forumline th:nth-child(2) {
+  width: 26%;
+}
+
+.cp_notifs .forumline th:nth-child(3) {
+  width: 8%;
+}
+
+.cp_notifs .notif_row > td {
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--colorAldou2);
+  line-height: 1.4;
+}
+
+.cp_notifs .notif_row > td:first-child {
+  overflow-wrap: anywhere;
+}
+
+.cp_notifs .notif_row > td:nth-child(n + 2) {
+  text-align: center;
+}
+
+.cp_notifs .notif_row > td:nth-child(2) {
+  white-space: normal;
+}
+
+.cp_notifs .notif_row a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body:has(#checkboxes) .cp_notifs .forumline th,
+body:has(#checkboxes) .cp_notifs .notif_row a,
+body:has(#checkboxes) .cp_notifs .notif_row a * {
+  color: var(--colorAldou3) !important;
+}
+
+.cp_notifs .notif_row input[type="checkbox"] {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 50%;
+  background: var(--colorAldou2);
+  cursor: pointer;
+  transition:
+    background-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.cp_notifs .notif_row input[type="checkbox"]:hover,
+.cp_notifs .notif_row input[type="checkbox"]:checked {
+  background: var(--colorAldou4);
+}
+
+.cp_notifs .notif_row input[type="checkbox"]:checked {
+  box-shadow: inset 0 0 0 6px var(--colorAldou2);
+}
+
+.cp_notifs .notif_row input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--colorAldou3);
+  outline-offset: 3px;
+}
+
+.cp_notifs .forumline .catBottom {
+  padding: 15px 0;
+}
+
+.cp_notifs .catBottom input[type="submit"] {
+  max-width: 100%;
+  margin: 3px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 10px;
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou1);
+  font-family: var(--fontAldou1);
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+  transition:
+    color 300ms ease,
+    background-color 300ms ease,
+    transform 300ms ease;
+}
+
+[data-color-scheme="dark"]
+.cp_notifs .catBottom input[type="submit"] {
+  background: var(--colorAldou4);
+}
+
+.cp_notifs .catBottom input[type="submit"]:hover {
+  color: var(--colorfontAldou2);
+  background: var(--colorAldou4);
+  transform: translateX(5px);
+}
+
+/* FLECHES ===== */
+#arrow-nav {
+  position: fixed;
+  z-index: 999;
+  bottom: 150px;
+  left: auto;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+
+#arrow-nav,
+#arrow-nav a {
+  color: var(--colorAldou4);
+}
+
+#arrow-nav a:hover {
+  color: var(--colorAldou2);
+}
+
+#arrow-nav a {
+  text-decoration: none !important;
+}
+
+
+/* BOUTON CHGNT DE THEME===== */
+.color-scheme-toggle {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--colorfontAldou1);
+  background: var(--colorAldou2);
+  border-radius: 50%;
+  font-size: 22px;
+  border:0;
+  cursor: pointer;
+  transition: color 300ms ease, background-color 300ms ease;
+}
+
+.color-scheme-toggle .dark,
+[data-color-scheme="dark"] .color-scheme-toggle .light {
+  display: block;
+}
+
+.color-scheme-toggle:hover {
+  color: var(--colorfontAldou2);
+  background: var(--colorAldou4);
+}
+
+[data-theme-controls] {
+  position: fixed;
+  z-index: 999;
+  top: 55px;
+  left: 15px;
+}
