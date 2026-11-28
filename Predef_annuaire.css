@@ -1,0 +1,506 @@
+.ep-directory,
+.ep-directory * {
+  box-sizing: border-box;
+}
+
+.ep-directory {
+  width: 100%;
+  padding: 18px;
+  border-radius: 18px;
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou1, Montserrat, sans-serif);
+}
+
+.ep-directory br {
+  display: none;
+}
+
+.ep-directory [hidden] {
+  display: none !important;
+}
+
+.ep-directory button,
+.ep-directory input {
+  font: inherit;
+}
+
+.ep-directory__layout {
+  display: flow-root;
+  padding-top: 20px;
+}
+
+.ep-directory__sidebar {
+  position: relative;
+  z-index: 1;
+  float: left;
+width: clamp(190px, calc(22% + 48px), 220px);
+  margin: 0 22px 18px 0;
+  padding: 14px 12px 22px;
+  border-radius: 15px;
+  background: var(--colorAldou4);
+}
+
+.ep-directory__sidebar::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -62px;
+  right: -25px;
+  width: 95px;
+  height: 150px;
+  background: url("https://i.servimg.com/u/f47/16/54/19/33/requin10.png") center / contain no-repeat;
+  pointer-events: none;
+}
+
+[data-color-scheme="dark"] .ep-directory__sidebar {
+  background: var(--colorAldou2);
+}
+
+[data-color-scheme="dark"] .ep-directory__sidebar::after {
+  background: url("https://i.servimg.com/u/f47/16/54/19/33/requin11.png") center / contain no-repeat;
+}
+
+.ep-directory__title {
+  margin: 0 0 10px;
+  color: var(--colorAldou5);
+  font-family: var(--fontAldou2, sans-serif);
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+[data-color-scheme="dark"] .ep-directory__title {
+  color: var(--colorAldou1);
+}
+
+.ep-directory__search {
+  width: 100%;
+  margin: 0 0 14px;
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--colorAldou0);
+  color: var(--colorfontAldou1);
+  outline-offset: 2px;
+  font-size: 11px !important;
+}
+
+.ep-directory__filter-group {
+  margin: 24px 0 0;
+}
+
+.ep-directory__filter-group h3 {
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid currentColor;
+  font-family: var(--fontAldou2, sans-serif);
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.ep-directory__choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.ep-directory .ep-filter,
+.ep-directory .ep-clear {
+  min-height: 24px;
+  padding: 4px 9px;
+  border: 0;
+  border-radius: 99px;
+  background: var(--colorAldou0);
+  color: var(--colorfontAldou1);
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 1.2;
+  transition: background-color .2s ease, color .2s ease, box-shadow .25s ease;
+}
+
+/* Contour lumineux au survol, sans changer le fond. */
+.ep-directory .ep-filter:hover,
+.ep-directory .ep-clear:hover {
+  box-shadow:
+    0 0 0 2px var(--colorAldou5),
+    0 0 9px color-mix(in srgb, var(--colorAldou5) 35%, transparent);
+  transform: none;
+}
+
+[data-color-scheme="dark"] .ep-directory .ep-filter:hover,
+[data-color-scheme="dark"] .ep-directory .ep-clear:hover {
+  box-shadow:
+    0 0 0 2px var(--colorAldou6),
+    0 0 9px color-mix(in srgb, var(--colorAldou6) 35%, transparent);
+}
+
+.ep-directory .ep-filter:active,
+.ep-directory .ep-clear:active,
+.ep-directory .ep-filter[aria-pressed="true"],
+.ep-directory .ep-filter[aria-pressed="true"]:hover {
+  background: var(--colorAldou5);
+  color: var(--colorfontAldou2);
+  transform: none;
+}
+
+[data-color-scheme="dark"] .ep-directory .ep-filter:active,
+[data-color-scheme="dark"] .ep-directory .ep-clear:active,
+[data-color-scheme="dark"] .ep-directory .ep-filter[aria-pressed="true"],
+[data-color-scheme="dark"] .ep-directory .ep-filter[aria-pressed="true"]:hover {
+  background: var(--colorAldou6);
+  color: var(--colorfontAldou2);
+}
+
+.ep-directory .ep-clear {
+  width: 100%;
+  margin-top: 24px;
+}
+
+/* Les cartes peuvent passer sous la colonne des filtres. */
+.ep-directory__results,
+.ep-directory__grid {
+  display: contents;
+}
+
+#ep-predefinis .ep-card {
+  --ep-title-height: 54px;
+
+  position: relative;
+  float: left;
+width: clamp(170px, calc(50% - 149px), 220px);
+  max-width: 100%;
+  min-width: 0;
+  margin: 0 18px 18px 0;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--colorAldou3);
+}
+
+[data-color-scheme="dark"] #ep-predefinis .ep-card {
+  background: var(--colorAldou6);
+}
+
+#ep-predefinis .ep-card-open {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#ep-predefinis .ep-card-open img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Le nom monte au survol et reste visible pendant le défilement. */
+#ep-predefinis .ep-card-name {
+  position: absolute;
+  top: calc(100% - var(--ep-title-height));
+  right: 0;
+  left: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  height: var(--ep-title-height);
+  padding: 4px 8px;
+  border-radius: 12px 12px 0 0;
+  background: var(--colorAldou3);
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou2, sans-serif);
+  font-size: 22px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  transition: top .45s ease;
+}
+
+[data-color-scheme="dark"] #ep-predefinis .ep-card-name {
+  background: var(--colorAldou6);
+  color: var(--colorfontAldou2);
+}
+
+/* Toute la fiche située sous le nom défile ensemble. */
+#ep-predefinis .ep-card .ep-detail {
+  position: absolute;
+  top: var(--ep-title-height);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex !important;
+  flex-direction: column;
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 0 0 12px 12px;
+  background: var(--colorAldou0);
+  color: var(--colorfontAldou1);
+  font-size: 11px;
+  transform: translateY(100%);
+  pointer-events: none;
+  transition: transform .45s ease;
+}
+
+#ep-predefinis .ep-card:hover .ep-card-name {
+  top: 0;
+}
+
+#ep-predefinis .ep-card:hover .ep-detail {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#ep-predefinis .ep-detail-name {
+  display: none;
+}
+
+#ep-predefinis .ep-detail-note {
+  order: 1;
+  position: relative;
+  flex: none;
+  margin: 0;
+  padding: 13px 12px 17px 25px;
+  background: var(--colorAldou2);
+  line-height: 1.35;
+}
+
+[data-color-scheme="dark"] #ep-predefinis .ep-detail-note {
+  background: var(--colorAldou5);
+}
+
+#ep-predefinis .ep-detail-note::before {
+  content: "•";
+  position: absolute;
+  left: 10px;
+  color: var(--colorAldou3);
+}
+
+[data-color-scheme="dark"] #ep-predefinis .ep-detail-note::before {
+  color: var(--colorAldou6);
+}
+
+#ep-predefinis .ep-more {
+  order: 2;
+  position: relative;
+  z-index: 1;
+  align-self: flex-end;
+  flex: none;
+  margin: -12px 10px -12px 0;
+  padding: 7px 12px;
+  border-radius: 99px;
+  background: var(--colorAldou4);
+  color: var(--colorfontAldou1);
+  font-family: var(--fontAldou2, sans-serif);
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .3s ease, color .3s ease, transform .3s ease;
+}
+
+#ep-predefinis .ep-more:hover,
+#ep-predefinis .ep-more:focus-visible {
+  background: var(--colorAldou5);
+  color: var(--colorfontAldou2);
+  transform: translateX(2px);
+}
+
+[data-color-scheme="dark"] #ep-predefinis .ep-more {
+  background: var(--colorAldou6);
+  color: var(--colorfontAldou2);
+}
+
+[data-color-scheme="dark"] #ep-predefinis .ep-more:hover,
+[data-color-scheme="dark"] #ep-predefinis .ep-more:focus-visible {
+  background: var(--colorAldou4);
+  color: var(--colorfontAldou2);
+}
+
+/* La liste participe au même défilement que la note et le lien. */
+#ep-predefinis .ep-detail dl {
+  order: 3;
+  flex: none;
+  margin: 0;
+  padding: 17px 12px 12px;
+  overflow: visible;
+  background: var(--colorAldou0);
+}
+
+#ep-predefinis .ep-detail dl div {
+  display: grid;
+  grid-template-columns: minmax(0, 44%) minmax(0, 56%);
+  gap: 5px;
+  padding: 8px 0;
+  border-bottom: 1px solid color-mix(
+    in srgb,
+    var(--colorfontAldou1) 25%,
+    transparent
+  );
+}
+
+#ep-predefinis .ep-detail dt {
+  font-weight: 600;
+}
+
+#ep-predefinis .ep-detail dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.ep-directory .ep-empty {
+  margin: 14px 0;
+  text-align: center;
+}
+
+@media (max-width: 1850px) {
+  .ep-directory__sidebar {
+    float: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 30px;
+    align-items: start;
+    width: 100%;
+    margin: 0 0 18px;
+    padding: 18px 22px 24px;
+  }
+
+  /* Trait vertical entre les deux colonnes. */
+  .ep-directory__sidebar::before {
+    content: "";
+    position: absolute;
+    top: 75px;
+    bottom: 70px;
+    left: 50%;
+    width: 1px;
+    background: currentColor;
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  .ep-directory__title {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  .ep-directory__search {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    width: min(100%, 190px);
+    margin: 0;
+  }
+
+  .ep-directory__filter-group {
+    margin: 0;
+    min-width: 0;
+  }
+
+  /* Gauche : Genre, Âge, Avatar. */
+  .ep-directory__filter-group:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .ep-directory__filter-group:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .ep-directory__filter-group:nth-of-type(4) {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  /* Droite : Panthéon, Groupe. */
+  .ep-directory__filter-group:nth-of-type(3) {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+  }
+
+  .ep-directory__filter-group:nth-of-type(5) {
+    grid-column: 2;
+    grid-row: 4;
+  }
+
+  .ep-directory .ep-clear {
+  grid-column: 1 / -1;
+  grid-row: 5;
+  justify-self: center;
+  position: relative;
+  z-index: 2;
+  width: 85%;
+  min-height: 32px;
+  margin: 8px 0 0;
+  padding: 5px 12px;
+  font-size: 12px;
+}
+
+.ep-directory__results {
+  display: block;
+}
+
+.ep-directory__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px 12px;
+  max-width: 572px;
+  margin-inline: auto;
+}
+
+#ep-predefinis .ep-card {
+  float: none;
+  width: clamp(170px, calc(50% - 12px), 280px);
+  margin: 0;
+}
+  /* Panthéon : en dessous */
+.ep-directory__filter-group:nth-of-type(3) {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/* Groupe : en haut */
+.ep-directory__filter-group:nth-of-type(5) {
+  grid-column: 2;
+  grid-row: 2;
+}
+}
+
+/* Sur très petit écran, les filtres reviennent sur une colonne. */
+@media (max-width: 700px) {
+  .ep-directory__sidebar {
+    display: block;
+  }
+
+  .ep-directory__sidebar::before {
+    display: none;
+  }
+
+  .ep-directory__search {
+    width: 100%;
+    margin: 0 0 14px;
+  }
+
+  .ep-directory__filter-group {
+    margin: 24px 0 0;
+  }
+
+  .ep-directory .ep-clear {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  #ep-predefinis .ep-card {
+    clear: both;
+width: min(100%, 330px);
+    margin-right: 0;
+  }
+}
